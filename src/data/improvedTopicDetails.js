@@ -571,55 +571,55 @@ export const improvedTopicDetails = {
     `,
     examples: [
       {
-        question: "1️⃣ ANA FİKİR SORUSU:\n\nSanat, insanoğlunun varoluşundan bu yana en temel ihtiyaçlarından biri olmuştur. İlkel insanlar mağara duvarlarına yaptıkları resimlerle düşüncelerini aktarırken, modern insan teknoloji sayesinde sanatı dijital ortama taşımıştır. Ancak her dönemde sanatın temel amacı değişmemiştir: İnsanın iç dünyasını dışa vurmak ve toplumla bağ kurmak. Bu yüzden sanat, evrensel bir dil olarak kabul edilir.\n\nBu parçada aşağıdakilerden hangisi VURGULANMIŞTIR?",
+        question: "1️⃣ ANA FİKİR SORUSU:\n\nDijital dünya, modern yaşamın ayrılmaz bir parçası haline gelmiştir. İnsanlar artık alışverişten eğitime, sağlıktan eğlenceye kadar pek çok alanda dijital araçları kullanmaktadır. Ancak bu yoğun dijital kullanım bazı sorunları da beraberinde getirmektedir. Uzmanlar, özellikle gençlerde görülen ekran bağımlılığının fiziksel ve psikolojik sorunlara yol açtığını belirtmektedir. Bu nedenle dijital araçları bilinçli ve dengeli kullanmak büyük önem taşımaktadır.\n\nBu parçada aşağıdakilerden hangisi VURGULANMIŞTIR?",
         options: [
-          "A) Sanatın tarihsel gelişimi",
-          "B) Teknolojinin sanata etkisi",
-          "C) Sanatın evrensel ve değişmez işlevi",
-          "D) İlkel insanların sanat anlayışı",
-          "E) Modern sanatın dijital boyutu"
+          "A) Dijital araçların yaygınlığı",
+          "B) Gençlerdeki ekran bağımlılığı",
+          "C) Dijital araçların bilinçli kullanımının önemi",
+          "D) Dijital dünyanın faydaları",
+          "E) Fiziksel ve psikolojik sorunlar"
         ],
         answer: "C",
-        explanation: "Parçada sanatın tarihsel gelişimi anlatılsa da, ASIL VURGU son iki cümlede yapılıyor: 'Her dönemde sanatın temel amacı DEĞİŞMEMİŞTİR' ve 'Sanat, evrensel bir dil'. Bu ifadeler sanatın zamana ve yere bağlı olmayan, değişmeyen işlevini vurguluyor."
+        explanation: "Parçada dijital araçlar ve sorunları anlatılıyor ama ASIL VURGU son cümlede: 'Bu nedenle dijital araçları bilinçli ve dengeli kullanmak büyük önem taşımaktadır'. Sonuç cümlesi ana fikri veriyor."
       },
       {
-        question: "2️⃣ KONU BELİRLEME SORUSU:\n\nYapay zeka teknolojileri, son yıllarda hayatımızın her alanında etkisini göstermektedir. Sağlıktan eğitime, ulaşımdan finansa kadar pek çok sektörde yapay zeka uygulamaları kullanılmaktadır. Özellikle makine öğrenmesi ve derin öğrenme gibi yapay zeka dalları hızla gelişmektedir. Ancak yapay zeka kullanımının etik boyutları da tartışılmaktadır.\n\nBu parçanın konusu aşağıdakilerden hangisidir?",
+        question: "2️⃣ KONU BELİRLEME SORUSU:\n\nKüresel ısınma, gezegenimizdeki tüm canlılar için ciddi bir tehdit oluşturmaktadır. Kutuplardaki buzulların erimesi, deniz seviyesinin yükselmesi ve aşırı hava olaylarının artması bu sorunun sonuçlarıdır. İklim değişikliği sadece doğayı değil, ekonomiyi ve toplumsal yapıyı da olumsuz etkilemektedir. Bilim insanları acil önlemler alınmazsa durumun daha da kötüleşeceği konusunda uyarıda bulunmaktadır.\n\nBu parçanın konusu aşağıdakilerden hangisidir?",
         options: [
-          "A) Yapay zeka",
-          "B) Teknolojinin gelişimi",
-          "C) Makine öğrenmesi",
-          "D) Etik sorunlar",
-          "E) Sağlık sektörü"
-        ],
-        answer: "A",
-        explanation: "Parçada EN ÇOK TEKRAR EDEN kavram 'yapay zeka'dır. Konu: Yapay zeka (2 kelime, kısa ve öz). Diğerleri ya alt başlık ya da yardımcı fikir."
-      },
-      {
-        question: "3️⃣ AMAÇ SORUSU:\n\nGünümüzde gençler, sosyal medyada geçirdikleri süreyi kontrol edemez hale gelmiştir. Saatlerce ekran başında vakit harcayan gençlerin sosyal ilişkileri zayıflamakta, okul başarıları düşmektedir. Aileler bu duruma duyarsız kalmayıp, çocuklarının teknoloji kullanımını mutlaka sınırlandırmalıdır.\n\nYazar bu parçada aşağıdakilerden hangisini amaçlamıştır?",
-        options: [
-          "A) Sosyal medyanın faydalarını anlatmak",
-          "B) Aileleri uyarmak ve ikna etmek",
-          "C) Gençlerin durumunu eleştirmek",
-          "D) Teknolojinin gelişimini övmek",
-          "E) Eğitim sistemini sorgulamak"
+          "A) Buzulların erimesi",
+          "B) Küresel ısınma",
+          "C) İklim değişikliği",
+          "D) Ekonomik sorunlar",
+          "E) Hava olayları"
         ],
         answer: "B",
-        explanation: "'Mutlaka sınırlandırmalıdır' ifadesi UYARMA/İKNA ETME amacı gösterir. Yazar aileleri uyarıp, çocuklarının sosyal medya kullanımını kontrol etmeleri konusunda ikna etmeye çalışıyor."
+        explanation: "Parçada EN ÇOK TEKRAR EDEN ve MERKEZ kavram 'küresel ısınma'dır. İklim değişikliği de doğru gibi dursa da küresel ısınma daha spesifik ve parçanın başında açıkça belirtilmiş. Konu: Küresel ısınma."
       },
       {
-        question: "4️⃣ VERİLEN BİLGİLER SORUSU:\n\nDüzenli uyku, insan sağlığı için son derece önemlidir. Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir. Ayrıca yeterli uyku, hafıza ve öğrenme kapasitesini artırır. Uzmanlar, yetişkinlerin günde 7-8 saat uyuması gerektiğini belirtmektedir.\n\nBu parçadan aşağıdakilerden hangisi ANLAŞILIR?",
+        question: "3️⃣ AMAÇ SORUSU:\n\nPlastik atıklar, okyanuslarımızı kirletmekte ve deniz canlılarını tehdit etmektedir. Her yıl milyonlarca ton plastik atık denizlere karışmakta, bu atıklar yüzlerce yıl boyunca doğada kalmaktadır. Bireysel çabalarla bu sorunu çözmek mümkün değildir. Hükümetler acilen plastik kullanımını sınırlandıran yasalar çıkarmalı ve geri dönüşüm sistemlerini güçlendirmelidir.\n\nYazar bu parçada aşağıdakilerden hangisini amaçlamıştır?",
         options: [
-          "A) Düzensiz uyku ciddi hastalıklara neden olur",
-          "B) Uyku sırasında bağışıklık sistemi güçlenir",
-          "C) Her insan 7-8 saat uyumalıdır",
-          "D) Uyku ilacı kullanmak zararlıdır",
-          "E) Çocuklar daha az uyumalıdır"
+          "A) Plastik atıkların zararlarını anlatmak",
+          "B) Hükümetleri harekete geçirmeye çağırmak",
+          "C) Deniz canlılarını korumak",
+          "D) Geri dönüşümün önemini vurgulamak",
+          "E) Bireyleri eleştirmek"
         ],
         answer: "B",
-        explanation: "Parçada 'Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir' cümlesi AÇIKÇA var. B şıkkı parçada GEÇİYOR. Diğerleri ya parçada yok, ya da aşırı genelleme."
+        explanation: "'Hükümetler acilen... çıkarmalı ve güçlendirmelidir' ifadesi ÇAĞRI/İKNA ETME amacı gösterir. Yazar hükümetleri plastik sorunu için harekete geçmeye çağırıyor."
       },
       {
-        question: "5️⃣ ANLATIM BİÇİMLERİ SORUSU:\n\nGeçen yaz köyde geçirdiğimiz o unutulmaz günleri hiç unutmuyorum. Sabahları taze çiçek kokularıyla uyanır, kuş sesleriyle güne başlardık. Büyükannemin bahçesinde koşuşturur, ağaçlardan meyve toplardık. Akşamları ise tüm aile bir araya gelir, uzun uzun sohbet ederdik.\n\nBu parçada hangi anlatım biçimi AĞIRLIKLIDIR?",
+        question: "4️⃣ VERİLEN BİLGİLER SORUSU:\n\nSu, tüm canlılar için yaşamsal öneme sahiptir. İnsan vücudunun %70'i sudan oluşur ve günlük su ihtiyacı karşılanmazsa vücut fonksiyonları olumsuz etkilenir. Yetersiz su tüketimi böbrek taşı, kabızlık ve baş ağrısı gibi sağlık sorunlarına yol açabilir. Uzmanlar, bir yetişkinin günde en az 2 litre su içmesi gerektiğini söylemektedir.\n\nBu parçadan aşağıdakilerden hangisi ANLAŞILIR?",
+        options: [
+          "A) Su içmek tüm hastalıkları önler",
+          "B) İnsan vücudunun %70'i sudan oluşur",
+          "C) Sadece yetişkinler su içmelidir",
+          "D) Günde 5 litre su içilmelidir",
+          "E) Su tüketimi sadece yazın önemlidir"
+        ],
+        answer: "B",
+        explanation: "Parçada 'İnsan vücudunun %70'i sudan oluşur' cümlesi AÇIKÇA var. B şıkkı aynen parçada GEÇİYOR. Diğerleri ya parçada yok, ya da yanlış genelleme."
+      },
+      {
+        question: "5️⃣ ANLATIM BİÇİMLERİ SORUSU:\n\nDeniz, sonsuz bir maviliğin içinde saklı bir hazinedir. Dalgaların ritmiyle dans eden su yüzeyi, güneş ışıklarının altında pırıl pırıl parlar. Kumsal, ayakların altında yumuşacık bir halı gibidir. Kulaklarınız deniz kuşlarının çığlıklarıyla dolup taşarken, burununuza tuzlu deniz kokusu gelir.\n\nBu parçada hangi anlatım biçimi AĞIRLIKLIDIR?",
         options: [
           "A) Betimleme",
           "B) Öyküleme",
@@ -627,56 +627,56 @@ export const improvedTopicDetails = {
           "D) Tartışma",
           "E) Tanıtma"
         ],
-        answer: "B",
-        explanation: "Parçada OLAY anlatılıyor (köyde geçirilen günler), zaman var (geçen yaz, sabahları, akşamları), kişiler var (ben, büyükanne, aile). Bu ÖYKÜLEME'nin özelliğidir."
+        answer: "A",
+        explanation: "Parçada TASVİR/CANLANDIRMA yapılıyor. Duyulara hitap eden ifadeler var (görme: pırıl pırıl, dokunma: yumuşacık, koku: tuzlu deniz kokusu, işitme: çığlıklar). 'Gibi' benzetme edatı kullanılmış. Bu BETİMLEME'nin özelliğidir."
       },
       {
-        question: "6️⃣ BAĞDAŞIKLIK SORUSU:\n\nI. Bu nedenle kitap okuma alışkanlığı kazanmak önemlidir.\nII. Kitaplar, insanın hayal gücünü geliştirir.\nIII. Ayrıca dil becerilerini de artırır.\nIV. Okuma, bilgi edinmenin en temel yollarından biridir.\n\nYukarıdaki cümlelerin anlamlı sıralaması hangisidir?",
+        question: "6️⃣ BAĞDAŞIKLIK SORUSU:\n\nI. Ancak bu durum son yıllarda değişmeye başladı.\nII. Çevre bilinci artık toplumun her kesiminde yaygınlaşıyor.\nIII. Geçmişte çevre sorunları pek ciddiye alınmazdı.\nIV. İnsanlar doğayı koruma konusunda daha duyarlı hale geldi.\n\nYukarıdaki cümlelerin anlamlı sıralaması hangisidir?",
         options: [
-          "A) IV-II-III-I",
+          "A) III-I-IV-II",
           "B) I-II-III-IV",
-          "C) II-III-IV-I",
-          "D) IV-I-II-III",
-          "E) II-IV-III-I"
+          "C) II-IV-I-III",
+          "D) III-II-I-IV",
+          "E) IV-III-I-II"
         ],
         answer: "A",
-        explanation: "IV ile başla (en genel ifade: 'Okuma bilgi edinmenin yolu'). II ve III devam (hayal gücü, dil becerileri). I ile bitir ('Bu nedenle' bağlacı SONUÇ cümlesi, öncesine atıfta bulunuyor)."
+        explanation: "III ile başla (geçmiş durum: 'Geçmişte... alınmazdı'). I ile devam ('Ancak' zıtlık bağlacı değişimi gösteriyor). IV ('İnsanlar... duyarlı hale geldi'). II ile bitir (güncel durum: 'artık yaygınlaşıyor')."
       },
       {
-        question: "7️⃣ CÜMLENİN YERİ SORUSU:\n\nTeknoloji hızla gelişiyor. (____) Bu durum toplumsal değişimleri de beraberinde getiriyor. İnsanlar yeni teknolojilere adapte olmaya çalışıyor.\n\nParçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?",
+        question: "7️⃣ CÜMLENİN YERİ SORUSU:\n\nEgzersiz yapmak sağlık için çok önemlidir. (____) Bu sayede hastalıklara karşı direnç kazanılır. Düzenli spor yapan kişiler daha mutlu ve enerjik olurlar.\n\nParçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?",
         options: [
-          "A) Ancak insanlar buna ayak uyduramıyor",
-          "B) Yapay zeka önem kazanıyor",
-          "C) Gelecekte ne olacağı belirsiz",
-          "D) Bu yüzden eğitim önemli",
-          "E) Geçmişte daha iyiydi"
+          "A) Spor yapmak çok zordur",
+          "B) Vücut düzenli hareketle güçlenir",
+          "C) Gelecekte spor salonları kapanacak",
+          "D) Yemek yemek önemlidir",
+          "E) Hareketsiz yaşam tercih edilir"
         ],
         answer: "B",
-        explanation: "Öncesinde 'Teknoloji gelişiyor', sonrasında 'Bu durum toplumsal değişim getiriyor'. B şıkkı (Yapay zeka) teknolojinin GELİŞMESİNE örnek veriyor. 'Bu durum' ifadesi boşluktaki cümleyi kastediyor."
+        explanation: "Öncesinde 'Egzersiz önemli', sonrasında 'Bu sayede hastalıklara direnç'. B şıkkı (Vücut güçlenir) egzersizin SONUCUNU veriyor ve 'bu sayede' ifadesiyle bağlantı kuruluyor."
       },
       {
-        question: "8️⃣ BOŞLUK DOLDURMA SORUSU:\n\nSpor yapmak, hem fiziksel hem de ruhsal sağlık için ________ .\n\nBoşluğa aşağıdakilerden hangisi getirilmelidir?",
+        question: "8️⃣ BOŞLUK DOLDURMA SORUSU:\n\nGüneş enerjisi, gelecekte fosil yakıtların yerini alabilecek ________ bir enerji kaynağıdır.\n\nBoşluğa aşağıdakilerden hangisi getirilmelidir?",
         options: [
-          "A) zararlıdır",
-          "B) önemsizdir",
-          "C) gereklidir",
-          "D) pahalıdır",
-          "E) gereksizdir"
+          "A) kirli",
+          "B) pahalı",
+          "C) yenilenebilir",
+          "D) eski",
+          "E) zararlı"
         ],
         answer: "C",
-        explanation: "'Spor yapmak sağlık için...' cümlesinin ANLAMI olumlu olmalı. Dilbilgisi: '-dır' eki var, sıfat/isim gerekli. C şıkkı hem anlamca hem dilbilgisi olarak uygun."
+        explanation: "'Fosil yakıtların yerini alabilecek' ifadesi olumsuz kelimelerle uyumsuz. 'Yenilenebilir' güneş enerjisinin en önemli özelliğidir ve anlam bütünlüğünü sağlar."
       },
       {
-        question: "9️⃣ ÇIKARIM SORUSU:\n\nYazarın tüm romanları çok satmıştır. Son kitabı da kısa sürede tükendi. Okuyucular yeni kitabını merakla bekliyor. İmza günleri her zaman kalabalık geçiyor.\n\nBu parçadan aşağıdakilerden hangisi ÇIKARILIR?",
+        question: "9️⃣ ÇIKARIM SORUSU:\n\nRestoran her akşam dolu dolu. Rezervasyon yapmadan masa bulmak neredeyse imkansız. Şef, ulusal bir televizyon programında ödül aldı. Menüdeki fiyatlar ortalama üstü olmasına rağmen müşteriler sürekli geliyor.\n\nBu parçadan aşağıdakilerden hangisi ÇIKARILIR?",
         options: [
-          "A) Yazar çok zengindir",
-          "B) Yazar popüler bir yazardır",
-          "C) Yazar en iyi yazardır",
-          "D) Yazar başka kitap yazmayacak",
-          "E) Yazar hiç ödül almamıştır"
+          "A) Restoran çok pahalıdır",
+          "B) Restoran başarılı ve tercih edilen bir mekandır",
+          "C) Restoran tek ödül almıştır",
+          "D) Tüm restoranlar başarılıdır",
+          "E) Rezervasyon sistemi kötüdür"
         ],
         answer: "B",
-        explanation: "Parçada 'tüm romanları çok sattı', 'kitabı tükendi', 'okuyucular bekliyor', 'imza günleri kalabalık' ifadeleri var. Bunlardan YORUM yaparsak: Yazar POPÜLER. A aşırı genelleme, C abartı, D ve E parçada yok."
+        explanation: "Parçada 'her akşam dolu', 'rezervasyon imkansız', 'ödül aldı', 'fiyatlar yüksek ama müşteriler geliyor' ifadeleri var. Bunlardan YORUM: Restoran BAŞARILI ve TERCİH EDİLİYOR. A kısmi doğru ama ana çıkarım değil, C-D-E parçada yok."
       }
     ],
     tips: [
