@@ -260,7 +260,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> Düzensiz uyku ciddi hastalıklara neden olur<br>
         <strong>B)</strong> Uyku sırasında bağışıklık sistemi güçlenir ✓<br>
         <strong>C)</strong> Her insan 7-8 saat uyumalıdır<br>
-        <strong>D)</strong> Uyku ilacı kullanmak zararlıdır
+        <strong>D)</strong> Uyku ilacı kullanmak zararlıdır<br>
+        <strong>E)</strong> Çocuklar daha az uyumalıdır
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada "Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir" 
@@ -324,7 +325,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> Betimleme<br>
         <strong>B)</strong> Öyküleme ✓<br>
         <strong>C)</strong> Açıklama<br>
-        <strong>D)</strong> Tartışma
+        <strong>D)</strong> Tartışma<br>
+        <strong>E)</strong> Tanıtma
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada OLAY anlatılıyor (köyde geçirilen günler), zaman var (geçen yaz, sabahları), 
@@ -376,7 +378,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> IV-II-III-I ✓<br>
         <strong>B)</strong> I-II-III-IV<br>
         <strong>C)</strong> II-III-IV-I<br>
-        <strong>D)</strong> IV-I-II-III
+        <strong>D)</strong> IV-I-II-III<br>
+        <strong>E)</strong> II-IV-III-I
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> <br>
@@ -420,7 +423,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> Ancak insanlar buna ayak uyduramıyor<br>
         <strong>B)</strong> Yapay zeka önem kazanıyor ✓<br>
         <strong>C)</strong> Gelecekte ne olacağı belirsiz<br>
-        <strong>D)</strong> Bu yüzden eğitim önemli
+        <strong>D)</strong> Bu yüzden eğitim önemli<br>
+        <strong>E)</strong> Geçmişte daha iyiydi
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Öncesinde "Teknoloji gelişiyor", sonrasında "Bu durum toplumsal değişim getiriyor". 
@@ -462,7 +466,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> zararlıdır<br>
         <strong>B)</strong> önemsizdir<br>
         <strong>C)</strong> gereklidir ✓<br>
-        <strong>D)</strong> pahalıdır
+        <strong>D)</strong> pahalıdır<br>
+        <strong>E)</strong> gereksizdir
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> "Spor yapmak sağlık için..." cümlesinin ANLAMI olumlu olmalı. 
@@ -504,7 +509,8 @@ export const improvedTopicDetails = {
         <strong>A)</strong> Yazar çok zengindir<br>
         <strong>B)</strong> Yazar popüler bir yazardır ✓<br>
         <strong>C)</strong> Yazar en iyi yazardır<br>
-        <strong>D)</strong> Yazar başka kitap yazmayacak
+        <strong>D)</strong> Yazar başka kitap yazmayacak<br>
+        <strong>E)</strong> Yazar hiç ödül almamıştır
       </p>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada "tüm romanları çok sattı", "son kitabı tükendi", "okuyucular bekliyor" 
@@ -544,16 +550,112 @@ export const improvedTopicDetails = {
     `,
     examples: [
       {
-        question: "Sanat, insanoğlunun varoluşundan bu yana en temel ihtiyaçlarından biri olmuştur. İlkel insanlar mağara duvarlarına yaptıkları resimlerle düşüncelerini aktarırken, modern insan teknoloji sayesinde sanatı dijital ortama taşımıştır. Ancak her dönemde sanatın temel amacı değişmemiştir: İnsanın iç dünyasını dışa vurmak ve toplumla bağ kurmak. Bu yüzden sanat, evrensel bir dil olarak kabul edilir.\n\nBu parçada aşağıdakilerden hangisi VURGULANMIŞTIR?",
+        question: "1️⃣ ANA FİKİR SORUSU:\n\nSanat, insanoğlunun varoluşundan bu yana en temel ihtiyaçlarından biri olmuştur. İlkel insanlar mağara duvarlarına yaptıkları resimlerle düşüncelerini aktarırken, modern insan teknoloji sayesinde sanatı dijital ortama taşımıştır. Ancak her dönemde sanatın temel amacı değişmemiştir: İnsanın iç dünyasını dışa vurmak ve toplumla bağ kurmak. Bu yüzden sanat, evrensel bir dil olarak kabul edilir.\n\nBu parçada aşağıdakilerden hangisi VURGULANMIŞTIR?",
         options: [
-          "A) Sanatın tarihsel gelişim süreci",
-          "B) Teknolojinin sanata katkısı",
+          "A) Sanatın tarihsel gelişimi",
+          "B) Teknolojinin sanata etkisi",
           "C) Sanatın evrensel ve değişmez işlevi",
           "D) İlkel insanların sanat anlayışı",
           "E) Modern sanatın dijital boyutu"
         ],
         answer: "C",
         explanation: "Parçada sanatın tarihsel gelişimi anlatılsa da, ASIL VURGU son iki cümlede yapılıyor: 'Her dönemde sanatın temel amacı DEĞİŞMEMİŞTİR' ve 'Sanat, evrensel bir dil'. Bu ifadeler sanatın zamana ve yere bağlı olmayan, değişmeyen işlevini vurguluyor."
+      },
+      {
+        question: "2️⃣ KONU BELİRLEME SORUSU:\n\nYapay zeka teknolojileri, son yıllarda hayatımızın her alanında etkisini göstermektedir. Sağlıktan eğitime, ulaşımdan finansa kadar pek çok sektörde yapay zeka uygulamaları kullanılmaktadır. Özellikle makine öğrenmesi ve derin öğrenme gibi yapay zeka dalları hızla gelişmektedir. Ancak yapay zeka kullanımının etik boyutları da tartışılmaktadır.\n\nBu parçanın konusu aşağıdakilerden hangisidir?",
+        options: [
+          "A) Yapay zeka",
+          "B) Teknolojinin gelişimi",
+          "C) Makine öğrenmesi",
+          "D) Etik sorunlar",
+          "E) Sağlık sektörü"
+        ],
+        answer: "A",
+        explanation: "Parçada EN ÇOK TEKRAR EDEN kavram 'yapay zeka'dır. Konu: Yapay zeka (2 kelime, kısa ve öz). Diğerleri ya alt başlık ya da yardımcı fikir."
+      },
+      {
+        question: "3️⃣ AMAÇ SORUSU:\n\nGünümüzde gençler, sosyal medyada geçirdikleri süreyi kontrol edemez hale gelmiştir. Saatlerce ekran başında vakit harcayan gençlerin sosyal ilişkileri zayıflamakta, okul başarıları düşmektedir. Aileler bu duruma duyarsız kalmayıp, çocuklarının teknoloji kullanımını mutlaka sınırlandırmalıdır.\n\nYazar bu parçada aşağıdakilerden hangisini amaçlamıştır?",
+        options: [
+          "A) Sosyal medyanın faydalarını anlatmak",
+          "B) Aileleri uyarmak ve ikna etmek",
+          "C) Gençlerin durumunu eleştirmek",
+          "D) Teknolojinin gelişimini övmek",
+          "E) Eğitim sistemini sorgulamak"
+        ],
+        answer: "B",
+        explanation: "'Mutlaka sınırlandırmalıdır' ifadesi UYARMA/İKNA ETME amacı gösterir. Yazar aileleri uyarıp, çocuklarının sosyal medya kullanımını kontrol etmeleri konusunda ikna etmeye çalışıyor."
+      },
+      {
+        question: "4️⃣ VERİLEN BİLGİLER SORUSU:\n\nDüzenli uyku, insan sağlığı için son derece önemlidir. Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir. Ayrıca yeterli uyku, hafıza ve öğrenme kapasitesini artırır. Uzmanlar, yetişkinlerin günde 7-8 saat uyuması gerektiğini belirtmektedir.\n\nBu parçadan aşağıdakilerden hangisi ANLAŞILIR?",
+        options: [
+          "A) Düzensiz uyku ciddi hastalıklara neden olur",
+          "B) Uyku sırasında bağışıklık sistemi güçlenir",
+          "C) Her insan 7-8 saat uyumalıdır",
+          "D) Uyku ilacı kullanmak zararlıdır",
+          "E) Çocuklar daha az uyumalıdır"
+        ],
+        answer: "B",
+        explanation: "Parçada 'Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir' cümlesi AÇIKÇA var. B şıkkı parçada GEÇİYOR. Diğerleri ya parçada yok, ya da aşırı genelleme."
+      },
+      {
+        question: "5️⃣ ANLATIM BİÇİMLERİ SORUSU:\n\nGeçen yaz köyde geçirdiğimiz o unutulmaz günleri hiç unutmuyorum. Sabahları taze çiçek kokularıyla uyanır, kuş sesleriyle güne başlardık. Büyükannemin bahçesinde koşuşturur, ağaçlardan meyve toplardık. Akşamları ise tüm aile bir araya gelir, uzun uzun sohbet ederdik.\n\nBu parçada hangi anlatım biçimi AĞIRLIKLIDIR?",
+        options: [
+          "A) Betimleme",
+          "B) Öyküleme",
+          "C) Açıklama",
+          "D) Tartışma",
+          "E) Tanıtma"
+        ],
+        answer: "B",
+        explanation: "Parçada OLAY anlatılıyor (köyde geçirilen günler), zaman var (geçen yaz, sabahları, akşamları), kişiler var (ben, büyükanne, aile). Bu ÖYKÜLEME'nin özelliğidir."
+      },
+      {
+        question: "6️⃣ BAĞDAŞIKLIK SORUSU:\n\nI. Bu nedenle kitap okuma alışkanlığı kazanmak önemlidir.\nII. Kitaplar, insanın hayal gücünü geliştirir.\nIII. Ayrıca dil becerilerini de artırır.\nIV. Okuma, bilgi edinmenin en temel yollarından biridir.\n\nYukarıdaki cümlelerin anlamlı sıralaması hangisidir?",
+        options: [
+          "A) IV-II-III-I",
+          "B) I-II-III-IV",
+          "C) II-III-IV-I",
+          "D) IV-I-II-III",
+          "E) II-IV-III-I"
+        ],
+        answer: "A",
+        explanation: "IV ile başla (en genel ifade: 'Okuma bilgi edinmenin yolu'). II ve III devam (hayal gücü, dil becerileri). I ile bitir ('Bu nedenle' bağlacı SONUÇ cümlesi, öncesine atıfta bulunuyor)."
+      },
+      {
+        question: "7️⃣ CÜMLENİN YERİ SORUSU:\n\nTeknoloji hızla gelişiyor. (____) Bu durum toplumsal değişimleri de beraberinde getiriyor. İnsanlar yeni teknolojilere adapte olmaya çalışıyor.\n\nParçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?",
+        options: [
+          "A) Ancak insanlar buna ayak uyduramıyor",
+          "B) Yapay zeka önem kazanıyor",
+          "C) Gelecekte ne olacağı belirsiz",
+          "D) Bu yüzden eğitim önemli",
+          "E) Geçmişte daha iyiydi"
+        ],
+        answer: "B",
+        explanation: "Öncesinde 'Teknoloji gelişiyor', sonrasında 'Bu durum toplumsal değişim getiriyor'. B şıkkı (Yapay zeka) teknolojinin GELİŞMESİNE örnek veriyor. 'Bu durum' ifadesi boşluktaki cümleyi kastediyor."
+      },
+      {
+        question: "8️⃣ BOŞLUK DOLDURMA SORUSU:\n\nSpor yapmak, hem fiziksel hem de ruhsal sağlık için ________ .\n\nBoşluğa aşağıdakilerden hangisi getirilmelidir?",
+        options: [
+          "A) zararlıdır",
+          "B) önemsizdir",
+          "C) gereklidir",
+          "D) pahalıdır",
+          "E) gereksizdir"
+        ],
+        answer: "C",
+        explanation: "'Spor yapmak sağlık için...' cümlesinin ANLAMI olumlu olmalı. Dilbilgisi: '-dır' eki var, sıfat/isim gerekli. C şıkkı hem anlamca hem dilbilgisi olarak uygun."
+      },
+      {
+        question: "9️⃣ ÇIKARIM SORUSU:\n\nYazarın tüm romanları çok satmıştır. Son kitabı da kısa sürede tükendi. Okuyucular yeni kitabını merakla bekliyor. İmza günleri her zaman kalabalık geçiyor.\n\nBu parçadan aşağıdakilerden hangisi ÇIKARILIR?",
+        options: [
+          "A) Yazar çok zengindir",
+          "B) Yazar popüler bir yazardır",
+          "C) Yazar en iyi yazardır",
+          "D) Yazar başka kitap yazmayacak",
+          "E) Yazar hiç ödül almamıştır"
+        ],
+        answer: "B",
+        explanation: "Parçada 'tüm romanları çok sattı', 'kitabı tükendi', 'okuyucular bekliyor', 'imza günleri kalabalık' ifadeleri var. Bunlardan YORUM yaparsak: Yazar POPÜLER. A aşırı genelleme, C abartı, D ve E parçada yok."
       }
     ],
     tips: [
