@@ -248,6 +248,25 @@ export const improvedTopicDetails = {
         <span class="text-sm italic">Örnek: Parçada "zengin" geçiyorsa, seçenekte "varlıklı" yazabilir</span>
       </p>
     </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
+        "Düzenli uyku, insan sağlığı için son derece önemlidir. Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir. 
+        Ayrıca yeterli uyku, hafıza ve öğrenme kapasitesini artırır. Uzmanlar, yetişkinlerin günde 7-8 saat uyuması gerektiğini belirtmektedir."
+      </p>
+      <p class="font-semibold text-gray-900">Bu parçadan aşağıdakilerden hangisi ANLAŞILIR?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> Düzensiz uyku ciddi hastalıklara neden olur<br>
+        <strong>B)</strong> Uyku sırasında bağışıklık sistemi güçlenir ✓<br>
+        <strong>C)</strong> Her insan 7-8 saat uyumalıdır<br>
+        <strong>D)</strong> Uyku ilacı kullanmak zararlıdır
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> Parçada "Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir" 
+        cümlesi AÇIKÇA var. B şıkkı parçada GEÇİYOR. Diğerleri ya parçada yok, ya da aşırı genelleme.
+      </p>
+    </div>
   </div>
 
   <!-- 5. ANLATIM BİÇİMLERİ - DETAYLI -->
@@ -293,6 +312,25 @@ export const improvedTopicDetails = {
         </ul>
       </div>
     </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
+        "Geçen yaz köyde geçirdiğimiz o unutulmaz günleri hiç unutmuyorum. Sabahları taze çiçek kokularıyla uyanır, 
+        kuş sesleriyle güne başlardık. Büyükannemin bahçesinde koşuşturur, ağaçlardan meyve toplardık..."
+      </p>
+      <p class="font-semibold text-gray-900">Bu parçada hangi anlatım biçimi AĞIRLIKLIDIR?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> Betimleme<br>
+        <strong>B)</strong> Öyküleme ✓<br>
+        <strong>C)</strong> Açıklama<br>
+        <strong>D)</strong> Tartışma
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> Parçada OLAY anlatılıyor (köyde geçirilen günler), zaman var (geçen yaz, sabahları), 
+        kişiler var (ben, büyükannem). Bu ÖYKÜLEME'nin özelliğidir.
+      </p>
+    </div>
   </div>
 
   <!-- 6. BAĞDAŞIKLIK - DETAYLI -->
@@ -324,6 +362,29 @@ export const improvedTopicDetails = {
         <li><strong>SEBEP-SONUÇ</strong> ilişkisi kur</li>
       </ol>
     </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 bg-white p-4 rounded border-l-4 border-gray-400">
+        <strong>I.</strong> Bu nedenle kitap okuma alışkanlığı kazanmak önemlidir.<br>
+        <strong>II.</strong> Kitaplar, insanın hayal gücünü geliştirir.<br>
+        <strong>III.</strong> Ayrıca dil becerilerini de artırır.<br>
+        <strong>IV.</strong> Okuma, bilgi edinmenin en temel yollarından biridir.
+      </p>
+      <p class="font-semibold text-gray-900">Yukarıdaki cümlelerin anlamlı sıralaması hangisidir?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> IV-II-III-I ✓<br>
+        <strong>B)</strong> I-II-III-IV<br>
+        <strong>C)</strong> II-III-IV-I<br>
+        <strong>D)</strong> IV-I-II-III
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> <br>
+        • IV ile başla (en genel ifade: "Okuma bilgi edinmenin yolu")<br>
+        • II ve III devam (okumayı hayal gücünü geliştirir, dil becerilerini artırır)<br>
+        • I ile bitir ("Bu nedenle" bağlacı SONUÇ cümlesi, öncesine atıfta bulunuyor)
+      </p>
+    </div>
   </div>
 
   <!-- 7. CÜMLENİN YERİ - DETAYLI -->
@@ -348,6 +409,25 @@ export const improvedTopicDetails = {
         <li><strong>BAĞLAÇLAR</strong> uyumlu olmalı</li>
       </ul>
     </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
+        "Teknoloji hızla gelişiyor. <strong>(____)</strong> Bu durum toplumsal değişimleri de beraberinde getiriyor."
+      </p>
+      <p class="font-semibold text-gray-900">Parçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> Ancak insanlar buna ayak uyduramıyor<br>
+        <strong>B)</strong> Yapay zeka önem kazanıyor ✓<br>
+        <strong>C)</strong> Gelecekte ne olacağı belirsiz<br>
+        <strong>D)</strong> Bu yüzden eğitim önemli
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> Öncesinde "Teknoloji gelişiyor", sonrasında "Bu durum toplumsal değişim getiriyor". 
+        B şıkkı (Yapay zeka) teknolojinin GELİŞMESİNE örnek veriyor ve sonrasıyla uyumlu. "Bu durum" ifadesi 
+        boşluktaki cümleyi kastediyor.
+      </p>
+    </div>
   </div>
 
   <!-- 8. BOŞLUK DOLDURMA - DETAYLI -->
@@ -371,6 +451,24 @@ export const improvedTopicDetails = {
         <li><strong>DİLBILGİSİ</strong> uyumuna dikkat</li>
       </ul>
     </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
+        "Spor yapmak, hem fiziksel hem de ruhsal sağlık için <strong>________</strong>."
+      </p>
+      <p class="font-semibold text-gray-900">Boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> zararlıdır<br>
+        <strong>B)</strong> önemsizdir<br>
+        <strong>C)</strong> gereklidir ✓<br>
+        <strong>D)</strong> pahalıdır
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> "Spor yapmak sağlık için..." cümlesinin ANLAMI olumlu olmalı. 
+        Dilbilgisi: "-dır" eki var, sıfat/isim gerekli. C şıkkı hem anlamca hem dilbilgisi olarak uygun.
+      </p>
+    </div>
   </div>
 
   <!-- 9. ÇIKARIM - DETAYLI -->
@@ -393,6 +491,25 @@ export const improvedTopicDetails = {
         <li>Mantıksal <strong>ÇIKARIM</strong> yap</li>
         <li>Abartılı seçeneklerden <strong>KAÇIN</strong></li>
       </ul>
+    </div>
+
+    <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-gray-900 mb-3">📌 Gerçek Örnek Soru:</h4>
+      <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
+        "Yazarın tüm romanları çok satmıştır. Son kitabı da kısa sürede tükendi. 
+        Okuyucular yeni kitabını merakla bekliyor."
+      </p>
+      <p class="font-semibold text-gray-900">Bu parçadan aşağıdakilerden hangisi ÇIKARILIR?</p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>A)</strong> Yazar çok zengindir<br>
+        <strong>B)</strong> Yazar popüler bir yazardır ✓<br>
+        <strong>C)</strong> Yazar en iyi yazardır<br>
+        <strong>D)</strong> Yazar başka kitap yazmayacak
+      </p>
+      <p class="text-sm text-gray-600 mt-3">
+        <strong>ÇÖZÜM:</strong> Parçada "tüm romanları çok sattı", "son kitabı tükendi", "okuyucular bekliyor" 
+        ifadeleri var. Bunlardan YORUM yaparsak: Yazar POPÜLER. A aşırı genelleme, C abartı, D parçada yok.
+      </p>
     </div>
   </div>
 
