@@ -1,6 +1,9 @@
 // DÜZGÜNLEŞTİRİLMİŞ İÇERİK - HTML FORMAT
+import allTopicsContent from './allTopicsContent';
 
 export const improvedTopicDetails = {
+  // Yeni içeriği merge et
+  ...allTopicsContent,
   "tyt-turkce-Paragraf": {
     title: "Paragraf",
     description: "TYT Türkçe'nin EN ÇOK SORU ÇIKAN bölümü. Test'in %55-60'ı paragraftan oluşur.",
