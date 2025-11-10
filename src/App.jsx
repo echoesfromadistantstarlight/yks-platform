@@ -1,16 +1,26 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
 
+  const handleStart = useCallback(() => {
+    console.log('Hemen Başla tıklandı!');
+    setCurrentPage('dashboard');
+  }, []);
+
+  const handleBackToHome = useCallback(() => {
+    console.log('Geri Dön tıklandı!');
+    setCurrentPage('landing');
+  }, []);
+
   return (
     <div className="min-h-screen">
       {currentPage === 'landing' ? (
-        <LandingPage onStart={() => setCurrentPage('dashboard')} />
+        <LandingPage onStart={handleStart} />
       ) : (
-        <Dashboard onBackToHome={() => setCurrentPage('landing')} />
+        <Dashboard onBackToHome={handleBackToHome} />
       )}
     </div>
   );

@@ -2,9 +2,19 @@ import { GraduationCap, BookOpen, Target, TrendingUp, Clock, CheckCircle2, Spark
 
 const LandingPage = ({ onStart }) => {
   const scrollToFeatures = () => {
+    console.log('Özellikleri Keşfet tıklandı!');
     const featuresSection = document.getElementById('features');
     if (featuresSection) {
       featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleStartClick = () => {
+    console.log('LandingPage: Hemen Başla butonu tıklandı');
+    if (onStart && typeof onStart === 'function') {
+      onStart();
+    } else {
+      console.error('onStart fonksiyonu tanımlı değil!');
     }
   };
 
@@ -68,8 +78,9 @@ const LandingPage = ({ onStart }) => {
               </div>
             </div>
             <button 
-              onClick={onStart}
+              onClick={handleStartClick}
               className="btn-primary"
+              type="button"
             >
               Hemen Başla
             </button>
@@ -99,8 +110,9 @@ const LandingPage = ({ onStart }) => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button 
-                onClick={onStart}
+                onClick={handleStartClick}
                 className="btn-primary flex items-center space-x-2 text-lg px-8 py-4 group"
+                type="button"
               >
                 <span>Hemen Başla</span>
                 <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -108,6 +120,7 @@ const LandingPage = ({ onStart }) => {
               <button
                 onClick={scrollToFeatures}
                 className="btn-secondary flex items-center space-x-2 text-lg px-8 py-4"
+                type="button"
               >
                 <span>Özellikleri Keşfet</span>
                 <TrendingUp className="w-5 h-5" />
