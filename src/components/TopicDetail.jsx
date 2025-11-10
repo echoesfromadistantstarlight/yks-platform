@@ -57,19 +57,19 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Title Section */}
-        <div className="card mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
-          <div className="flex items-start space-x-4">
-            <div className="p-4 rounded-xl" style={{ backgroundColor: subjectColor, color: 'white' }}>
-              <BookOpen className="w-10 h-10" />
+        <div className="card mb-6 sm:mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
+          <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+            <div className="p-3 sm:p-4 rounded-xl" style={{ backgroundColor: subjectColor, color: 'white' }}>
+              <BookOpen className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
             <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-2">
-                <h1 className="text-3xl font-bold text-gray-900">{topicData.title}</h1>
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">{topicData.title}</h1>
                 <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
                   {topicData.importance}
                 </span>
               </div>
-              <p className="text-lg text-gray-700 mb-2">{topicData.description}</p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-2">{topicData.description}</p>
               <div className="flex items-center space-x-2 text-sm">
                 <span className="px-3 py-1 bg-white rounded-full font-semibold" style={{ color: subjectColor }}>
                   {examType.toUpperCase()}
@@ -98,31 +98,33 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         {/* Examples Section */}
         {topicData.examples && topicData.examples.length > 0 && (
           <div className="card mb-8">
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
               <div className="p-2 bg-purple-500 rounded-lg">
-                <FileQuestion className="w-6 h-6 text-white" />
+                <FileQuestion className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">Örnek Sorular</h2>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Örnek Sorular</h2>
             </div>
             
             {/* Question Navigation */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-4 sm:mb-6 gap-2">
               <button
                 onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
                 disabled={currentQuestionIndex === 0}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg font-semibold transition"
+                className="px-2 sm:px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg text-xs sm:text-sm font-semibold transition"
               >
-                ← Önceki Soru
+                <span className="hidden sm:inline">← Önceki</span>
+                <span className="sm:hidden">←</span>
               </button>
-              <span className="text-gray-700 font-semibold">
-                Soru {currentQuestionIndex + 1} / {topicData.examples.length}
+              <span className="text-xs sm:text-sm md:text-base text-gray-700 font-semibold whitespace-nowrap">
+                {currentQuestionIndex + 1} / {topicData.examples.length}
               </span>
               <button
                 onClick={() => setCurrentQuestionIndex(Math.min(topicData.examples.length - 1, currentQuestionIndex + 1))}
                 disabled={currentQuestionIndex === topicData.examples.length - 1}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg font-semibold transition"
+                className="px-2 sm:px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg text-xs sm:text-sm font-semibold transition"
               >
-                Sonraki Soru →
+                <span className="hidden sm:inline">Sonraki →</span>
+                <span className="sm:hidden">→</span>
               </button>
             </div>
 
@@ -131,7 +133,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               {topicData.examples.filter((_, index) => index === currentQuestionIndex).map((example, index) => {
                 const actualIndex = currentQuestionIndex;
                 return (
-                  <div key={actualIndex} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-gray-200">
+                  <div key={actualIndex} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 sm:p-6 border-2 border-gray-200">
                     <div className="flex items-center space-x-3 mb-4">
                       <div className="bg-purple-500 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
                         {actualIndex + 1}
@@ -139,8 +141,8 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                       <h3 className="text-lg font-bold text-gray-900">Örnek Soru</h3>
                     </div>
                   
-                  <div className="bg-white rounded-lg p-5 mb-4 shadow-sm">
-                    <p className="text-gray-800 leading-relaxed whitespace-pre-line mb-4">
+                  <div className="bg-white rounded-lg p-3 sm:p-5 mb-4 shadow-sm">
+                    <p className="text-sm sm:text-base text-gray-800 leading-relaxed whitespace-pre-line mb-4">
                       {example.question}
                     </p>
                     

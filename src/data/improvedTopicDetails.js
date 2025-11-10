@@ -585,37 +585,37 @@ export const improvedTopicDetails = {
       {
         question: "2️⃣ KONU BELİRLEME SORUSU:\n\nKüresel ısınma, gezegenimizdeki tüm canlılar için ciddi bir tehdit oluşturmaktadır. Kutuplardaki buzulların erimesi, deniz seviyesinin yükselmesi ve aşırı hava olaylarının artması bu sorunun sonuçlarıdır. İklim değişikliği sadece doğayı değil, ekonomiyi ve toplumsal yapıyı da olumsuz etkilemektedir. Bilim insanları acil önlemler alınmazsa durumun daha da kötüleşeceği konusunda uyarıda bulunmaktadır.\n\nBu parçanın konusu aşağıdakilerden hangisidir?",
         options: [
-          "A) Buzulların erimesi",
-          "B) Küresel ısınma",
-          "C) İklim değişikliği",
-          "D) Ekonomik sorunlar",
+          "A) İklim değişikliği",
+          "B) Buzulların erimesi",
+          "C) Ekonomik sorunlar",
+          "D) Küresel ısınma",
           "E) Hava olayları"
         ],
-        answer: "B",
+        answer: "D",
         explanation: "Parçada EN ÇOK TEKRAR EDEN ve MERKEZ kavram 'küresel ısınma'dır. İklim değişikliği de doğru gibi dursa da küresel ısınma daha spesifik ve parçanın başında açıkça belirtilmiş. Konu: Küresel ısınma."
       },
       {
         question: "3️⃣ AMAÇ SORUSU:\n\nPlastik atıklar, okyanuslarımızı kirletmekte ve deniz canlılarını tehdit etmektedir. Her yıl milyonlarca ton plastik atık denizlere karışmakta, bu atıklar yüzlerce yıl boyunca doğada kalmaktadır. Bireysel çabalarla bu sorunu çözmek mümkün değildir. Hükümetler acilen plastik kullanımını sınırlandıran yasalar çıkarmalı ve geri dönüşüm sistemlerini güçlendirmelidir.\n\nYazar bu parçada aşağıdakilerden hangisini amaçlamıştır?",
         options: [
-          "A) Plastik atıkların zararlarını anlatmak",
-          "B) Hükümetleri harekete geçirmeye çağırmak",
-          "C) Deniz canlılarını korumak",
+          "A) Deniz canlılarını korumak",
+          "B) Plastik atıkların zararlarını anlatmak",
+          "C) Bireyleri eleştirmek",
           "D) Geri dönüşümün önemini vurgulamak",
-          "E) Bireyleri eleştirmek"
+          "E) Hükümetleri harekete geçirmeye çağırmak"
         ],
-        answer: "B",
+        answer: "E",
         explanation: "'Hükümetler acilen... çıkarmalı ve güçlendirmelidir' ifadesi ÇAĞRI/İKNA ETME amacı gösterir. Yazar hükümetleri plastik sorunu için harekete geçmeye çağırıyor."
       },
       {
         question: "4️⃣ VERİLEN BİLGİLER SORUSU:\n\nSu, tüm canlılar için yaşamsal öneme sahiptir. İnsan vücudunun %70'i sudan oluşur ve günlük su ihtiyacı karşılanmazsa vücut fonksiyonları olumsuz etkilenir. Yetersiz su tüketimi böbrek taşı, kabızlık ve baş ağrısı gibi sağlık sorunlarına yol açabilir. Uzmanlar, bir yetişkinin günde en az 2 litre su içmesi gerektiğini söylemektedir.\n\nBu parçadan aşağıdakilerden hangisi ANLAŞILIR?",
         options: [
-          "A) Su içmek tüm hastalıkları önler",
-          "B) İnsan vücudunun %70'i sudan oluşur",
-          "C) Sadece yetişkinler su içmelidir",
-          "D) Günde 5 litre su içilmelidir",
-          "E) Su tüketimi sadece yazın önemlidir"
+          "A) Günde 5 litre su içilmelidir",
+          "B) Su tüketimi sadece yazın önemlidir",
+          "C) İnsan vücudunun %70'i sudan oluşur",
+          "D) Su içmek tüm hastalıkları önler",
+          "E) Sadece yetişkinler su içmelidir"
         ],
-        answer: "B",
+        answer: "C",
         explanation: "Parçada 'İnsan vücudunun %70'i sudan oluşur' cümlesi AÇIKÇA var. B şıkkı aynen parçada GEÇİYOR. Diğerleri ya parçada yok, ya da yanlış genelleme."
       },
       {
@@ -645,25 +645,25 @@ export const improvedTopicDetails = {
       {
         question: "7️⃣ CÜMLENİN YERİ SORUSU:\n\nEgzersiz yapmak sağlık için çok önemlidir. (____) Bu sayede hastalıklara karşı direnç kazanılır. Düzenli spor yapan kişiler daha mutlu ve enerjik olurlar.\n\nParçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?",
         options: [
-          "A) Spor yapmak çok zordur",
-          "B) Vücut düzenli hareketle güçlenir",
-          "C) Gelecekte spor salonları kapanacak",
+          "A) Vücut düzenli hareketle güçlenir",
+          "B) Gelecekte spor salonları kapanacak",
+          "C) Hareketsiz yaşam tercih edilir",
           "D) Yemek yemek önemlidir",
-          "E) Hareketsiz yaşam tercih edilir"
+          "E) Spor yapmak çok zordur"
         ],
-        answer: "B",
+        answer: "A",
         explanation: "Öncesinde 'Egzersiz önemli', sonrasında 'Bu sayede hastalıklara direnç'. B şıkkı (Vücut güçlenir) egzersizin SONUCUNU veriyor ve 'bu sayede' ifadesiyle bağlantı kuruluyor."
       },
       {
         question: "8️⃣ BOŞLUK DOLDURMA SORUSU:\n\nGüneş enerjisi, gelecekte fosil yakıtların yerini alabilecek ________ bir enerji kaynağıdır.\n\nBoşluğa aşağıdakilerden hangisi getirilmelidir?",
         options: [
-          "A) kirli",
-          "B) pahalı",
-          "C) yenilenebilir",
-          "D) eski",
-          "E) zararlı"
+          "A) pahalı",
+          "B) eski",
+          "C) zararlı",
+          "D) yenilenebilir",
+          "E) kirli"
         ],
-        answer: "C",
+        answer: "D",
         explanation: "'Fosil yakıtların yerini alabilecek' ifadesi olumsuz kelimelerle uyumsuz. 'Yenilenebilir' güneş enerjisinin en önemli özelliğidir ve anlam bütünlüğünü sağlar."
       },
       {
