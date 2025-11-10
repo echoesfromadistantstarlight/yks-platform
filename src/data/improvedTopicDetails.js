@@ -209,36 +209,190 @@ export const improvedTopicDetails = {
     </div>
   </div>
 
-  <!-- DİĞER TİPLER KISACA -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-lg border-2 border-yellow-300">
-      <h4 class="font-bold text-lg mb-2">4️⃣ VERİLEN BİLGİLER</h4>
-      <p class="text-sm text-gray-700">Parçada açıkça söylenen/anlaşılan bilgiler. ELEME yöntemiyle çöz!</p>
+  <!-- 4. VERİLEN BİLGİLER - DETAYLI -->
+  <div class="bg-white border-2 border-yellow-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-yellow-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">4️⃣ PARAGRAFTA VERİLEN BİLGİLER</h3>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-yellow-800 mb-2">✏️ Tanım:</h4>
+      <p class="text-gray-700 text-lg">
+        Parçada <strong>açıkça söylenen</strong> veya <strong>anlaşılan</strong> bilgiler.
+      </p>
     </div>
 
-    <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-4 rounded-lg border-2 border-pink-300">
-      <h4 class="font-bold text-lg mb-2">5️⃣ ANLATIM BİÇİMLERİ</h4>
-      <p class="text-sm text-gray-700">Öyküleme, Betimleme, Açıklama, Tartışma türlerini ayırt et!</p>
+    <div class="mb-4 bg-yellow-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-yellow-900 mb-2">📝 Soru Örnekleri:</h4>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>"Bu parçadan aşağıdakilerden hangisi <strong>ANLAŞILIR</strong>?"</li>
+        <li>"Parçaya göre..."</li>
+        <li>"Parçada aşağıdakilerden hangisine <strong>DEĞİNİLMEMİŞTİR</strong>?"</li>
+      </ul>
     </div>
 
-    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-lg border-2 border-indigo-300">
-      <h4 class="font-bold text-lg mb-2">6️⃣ BAĞDAŞIKLIK</h4>
-      <p class="text-sm text-gray-700">Karışık cümleleri sırala. Bağlaçlara dikkat!</p>
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-green-800 mb-2">✅ Çözüm:</h4>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li><strong>ELEME yöntemi</strong> kullan</li>
+        <li>Seçenekleri parçayla <strong>EŞLEŞTIR</strong></li>
+        <li>Parçada <strong>GEÇEN</strong> ifadeleri bul</li>
+        <li>"Değinilmemiştir" sorularında: Parçada <strong>OLMAYANI</strong> bul</li>
+      </ul>
     </div>
 
-    <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-4 rounded-lg border-2 border-teal-300">
-      <h4 class="font-bold text-lg mb-2">7️⃣ CÜMLENİN YERİ</h4>
-      <p class="text-sm text-gray-700">Boşluğun öncesi ve sonrasına bak!</p>
+    <div class="bg-red-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-red-800 mb-2">⚠️ DİKKAT:</h4>
+      <p class="text-gray-700">
+        Seçenekte <strong>farklı kelimelerle</strong> ifade edilebilir!<br>
+        <span class="text-sm italic">Örnek: Parçada "zengin" geçiyorsa, seçenekte "varlıklı" yazabilir</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 5. ANLATIM BİÇİMLERİ - DETAYLI -->
+  <div class="bg-white border-2 border-pink-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-pink-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">5️⃣ ANLATIM BİÇİMLERİ</h3>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+        <h5 class="font-bold text-blue-900 mb-2">📖 ÖYKÜLEME</h5>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Olay anlatımı</li>
+          <li>• Zaman sıralı akış</li>
+          <li>• Kişiler, olay, yer, zaman var</li>
+        </ul>
+      </div>
+
+      <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+        <h5 class="font-bold text-green-900 mb-2">🎨 BETİMLEME</h5>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Tasvir, canlandırma</li>
+          <li>• Duyulara hitap eden ifadeler</li>
+          <li>• "...gibi", "sanki" kelimeleri</li>
+        </ul>
+      </div>
+
+      <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+        <h5 class="font-bold text-purple-900 mb-2">📚 AÇIKLAMA</h5>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Bilgi verme</li>
+          <li>• Objektif anlatım</li>
+          <li>• Tanım, örnek, karşılaştırma</li>
+        </ul>
+      </div>
+
+      <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+        <h5 class="font-bold text-red-900 mb-2">💭 TARTIŞMA</h5>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Fikir ileri sürme</li>
+          <li>• Kanıtlama, eleştirme</li>
+          <li>• "...meli", "...malı" cümleleri</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. BAĞDAŞIKLIK - DETAYLI -->
+  <div class="bg-white border-2 border-indigo-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-indigo-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">6️⃣ BAĞDAŞIKLIK (CÜMLE SIRALAMASI)</h3>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-indigo-800 mb-2">✏️ Tanım:</h4>
+      <p class="text-gray-700 text-lg">
+        Karışık verilen cümleleri <strong>MANTIĞI SIRAYA</strong> koymak.
+      </p>
     </div>
 
-    <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-lg border-2 border-orange-300">
-      <h4 class="font-bold text-lg mb-2">8️⃣ BOŞLUK DOLDURMA</h4>
-      <p class="text-sm text-gray-700">Anlama uygun kelimeyi bul!</p>
+    <div class="bg-indigo-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-indigo-900 mb-3">✅ Çözüm Stratejisi:</h4>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700">
+        <li><strong>GİRİŞ cümlesini</strong> bul (genellikle en genel ifade)</li>
+        <li><strong>SONUÇ cümlesini</strong> bul ("bu nedenle", "sonuçta")</li>
+        <li><strong>BAĞLAÇLARA</strong> dikkat:
+          <ul class="list-disc list-inside ml-6 mt-1 text-sm">
+            <li>"Bu", "Bu nedenle" → Öncesine atıfta bulunur</li>
+            <li>"Ancak", "Fakat" → Zıtlık bildirir</li>
+            <li>"Ayrıca" → Ekleme yapar</li>
+          </ul>
+        </li>
+        <li><strong>ZAMANLARA</strong> dikkat (geçmiş → şimdi)</li>
+        <li><strong>SEBEP-SONUÇ</strong> ilişkisi kur</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 7. CÜMLENİN YERİ - DETAYLI -->
+  <div class="bg-white border-2 border-teal-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-teal-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">7️⃣ CÜMLENİN YERİ</h3>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-teal-800 mb-2">✏️ Tanım:</h4>
+      <p class="text-gray-700 text-lg">
+        Verilen cümlenin paragraftaki <strong>BOŞLUĞA</strong> uygun olup olmadığı.
+      </p>
     </div>
 
-    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg border-2 border-purple-300">
-      <h4 class="font-bold text-lg mb-2">9️⃣ ÇIKARIM</h4>
-      <p class="text-sm text-gray-700">Parçadan mantıksal sonuç çıkar!</p>
+    <div class="bg-teal-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-teal-900 mb-2">✅ Çözüm:</h4>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Boşluktan <strong>ÖNCESİNE</strong> bak</li>
+        <li>Boşluktan <strong>SONRASINA</strong> bak</li>
+        <li><strong>ANLAM BÜTÜNLÜĞÜNÜ</strong> kontrol et</li>
+        <li><strong>BAĞLAÇLAR</strong> uyumlu olmalı</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8. BOŞLUK DOLDURMA - DETAYLI -->
+  <div class="bg-white border-2 border-orange-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-orange-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">8️⃣ BOŞLUK DOLDURMA</h3>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-orange-800 mb-2">✏️ Tanım:</h4>
+      <p class="text-gray-700 text-lg">
+        Boşaltılmış <strong>kelime/kelime grubunu</strong> bulma.
+      </p>
+    </div>
+
+    <div class="bg-orange-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-orange-900 mb-2">✅ Çözüm:</h4>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Boşluktan <strong>önce ve sonraki kelimelere BAK</strong></li>
+        <li><strong>ANLAMI</strong> tamamlayan kelimeyi bul</li>
+        <li><strong>DİLBILGİSİ</strong> uyumuna dikkat</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 9. ÇIKARIM - DETAYLI -->
+  <div class="bg-white border-2 border-purple-200 rounded-xl p-6 shadow-lg">
+    <div class="bg-purple-500 text-white px-4 py-2 rounded-lg inline-block mb-4">
+      <h3 class="text-xl font-bold">9️⃣ PARÇADAN ÇIKARILACAK BİLGİLER</h3>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-bold text-lg text-purple-800 mb-2">✏️ Tanım:</h4>
+      <p class="text-gray-700 text-lg">
+        Parçadan <strong>YORUM</strong> yaparak ulaşılan bilgiler.
+      </p>
+    </div>
+
+    <div class="bg-purple-50 p-4 rounded-lg">
+      <h4 class="font-bold text-lg text-purple-900 mb-2">✅ Çözüm:</h4>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Direk yazılmamış ama <strong>ANLATILIYOR</strong></li>
+        <li>Mantıksal <strong>ÇIKARIM</strong> yap</li>
+        <li>Abartılı seçeneklerden <strong>KAÇIN</strong></li>
+      </ul>
     </div>
   </div>
 
