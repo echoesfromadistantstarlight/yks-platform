@@ -5,6 +5,7 @@ import { getTopicDetail } from '../data/topicDetails';
 const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onComplete, isCompleted }) => {
   const [showAnswer, setShowAnswer] = useState({});
   const [selectedOptions, setSelectedOptions] = useState({});
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const topicData = getTopicDetail(examType, subjectId, topicName);
 
   const toggleAnswer = (index) => {
@@ -102,15 +103,39 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               <h2 className="text-2xl font-bold text-gray-900">Örnek Sorular</h2>
             </div>
             
+            {/* Question Navigation */}
+            <div className="flex items-center justify-between mb-6">
+              <button
+                onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
+                disabled={currentQuestionIndex === 0}
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg font-semibold transition"
+              >
+                ← Önceki Soru
+              </button>
+              <span className="text-gray-700 font-semibold">
+                Soru {currentQuestionIndex + 1} / {topicData.examples.length}
+              </span>
+              <button
+                onClick={() => setCurrentQuestionIndex(Math.min(topicData.examples.length - 1, currentQuestionIndex + 1))}
+                disabled={currentQuestionIndex === topicData.examples.length - 1}
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg font-semibold transition"
+              >
+                Sonraki Soru →
+              </button>
+            </div>
+
+            {/* Current Question */}
             <div className="space-y-6">
-              {topicData.examples.map((example, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-gray-200">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-purple-500 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                      {index + 1}
+              {topicData.examples.filter((_, index) => index === currentQuestionIndex).map((example, index) => {
+                const actualIndex = currentQuestionIndex;
+                return (
+                  <div key={actualIndex} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="bg-purple-500 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                        {actualIndex + 1}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900">Örnek Soru</h3>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">Örnek Soru</h3>
-                  </div>
                   
                   <div className="bg-white rounded-lg p-5 mb-4 shadow-sm">
                     <p className="text-gray-800 leading-relaxed whitespace-pre-line mb-4">
@@ -120,14 +145,14 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                     <div className="space-y-2">
                       {example.options.map((option, optIndex) => {
                         const optionLetter = option.charAt(0);
-                        const isSelected = selectedOptions[index] === optionLetter;
-                        const isCorrect = showAnswer[index] && option.startsWith(example.answer + ')');
-                        const isWrong = showAnswer[index] && isSelected && !isCorrect;
+                        const isSelected = selectedOptions[actualIndex] === optionLetter;
+                        const isCorrect = showAnswer[actualIndex] && option.startsWith(example.answer + ')');
+                        const isWrong = showAnswer[actualIndex] && isSelected && !isCorrect;
                         
                         return (
                           <button
                             key={optIndex}
-                            onClick={() => selectOption(index, optionLetter)}
+                            onClick={() => selectOption(actualIndex, optionLetter)}
                             className={`w-full text-left p-3 rounded-lg border-2 transition-all ${
                               isCorrect
                                 ? 'bg-green-100 border-green-500 font-semibold'
@@ -145,14 +170,14 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                     </div>
                   </div>
 
-                  <button
-                    onClick={() => toggleAnswer(index)}
-                    className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all shadow-md hover:shadow-lg"
-                  >
-                    {showAnswer[index] ? '🔒 Çözümü Gizle' : '🔓 Çözümü Göster'}
-                  </button>
+                    <button
+                      onClick={() => toggleAnswer(actualIndex)}
+                      className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all shadow-md hover:shadow-lg"
+                    >
+                      {showAnswer[actualIndex] ? '🔒 Çözümü Gizle' : '🔓 Çözümü Göster'}
+                    </button>
 
-                  {showAnswer[index] && (
+                    {showAnswer[actualIndex] && (
                     <div className="mt-4 bg-green-50 border-2 border-green-300 rounded-lg p-5">
                       <div className="flex items-center space-x-2 mb-3">
                         <Trophy className="w-6 h-6 text-green-600" />
@@ -161,10 +186,11 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                       <div className="text-gray-700 leading-relaxed whitespace-pre-line">
                         {example.explanation}
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
