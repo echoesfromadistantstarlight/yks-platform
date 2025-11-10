@@ -85,9 +85,10 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
             <h2 className="text-2xl font-bold text-gray-900">Konu Anlatımı</h2>
           </div>
           <div className="prose prose-lg max-w-none">
-            <div className="whitespace-pre-line text-gray-700 leading-relaxed">
-              {topicData.content}
-            </div>
+            <div 
+              className="text-gray-700 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: topicData.content }}
+            />
           </div>
         </div>
 

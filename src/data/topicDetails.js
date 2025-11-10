@@ -1,5 +1,9 @@
 // Detaylı konu anlatımları ve örnek sorular
+import { improvedTopicDetails } from './improvedTopicDetails';
+
 export const topicDetails = {
+  // Improved content'i merge et
+  ...improvedTopicDetails,
   // ============ TYT TÜRKÇE ============
   
   "tyt-turkce-Paragraf": {
@@ -7,11 +11,15 @@ export const topicDetails = {
     description: "TYT Türkçe'nin EN ÇOK SORU ÇIKAN bölümü. Test'in %55-60'ı paragraftan oluşur.",
     importance: "22-25 soru",
     content: `
-### Paragraf Nedir?
-- Paragraf, bir düşünceyi veya konuyu işleyen, girintili ve mantıklı bir bütün oluşturan cümleler topluluğudur.
-- Ana fikir + Yardımcı fikirler şeklinde yapılandırılır.
+<div class="space-y-6">
 
-### 📚 Paragraf Soru Tipleri (DETAYLI ANLATI M):
+<div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+  <h3 class="text-xl font-bold text-blue-900 mb-2">📖 Paragraf Nedir?</h3>
+  <p class="text-gray-700">Paragraf, bir düşünceyi veya konuyu işleyen, girintili ve mantıklı bir bütün oluşturan cümleler topluluğudur.</p>
+  <p class="text-gray-700 mt-2">Ana fikir + Yardımcı fikirler şeklinde yapılandırılır.</p>
+</div>
+
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">📚 Paragraf Soru Tipleri (DETAYLI ANLATIM):</h2>
 
 ---
 
