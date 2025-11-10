@@ -4,10 +4,18 @@ import { getTopicDetail } from '../data/topicDetails';
 
 const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onComplete, isCompleted }) => {
   const [showAnswer, setShowAnswer] = useState({});
+  const [selectedOptions, setSelectedOptions] = useState({});
   const topicData = getTopicDetail(examType, subjectId, topicName);
 
   const toggleAnswer = (index) => {
     setShowAnswer(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  const selectOption = (questionIndex, option) => {
+    setSelectedOptions(prev => ({
+      ...prev,
+      [questionIndex]: option
+    }));
   };
 
   return (
@@ -104,18 +112,30 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                     </p>
                     
                     <div className="space-y-2">
-                      {example.options.map((option, optIndex) => (
-                        <div
-                          key={optIndex}
-                          className={`p-3 rounded-lg border-2 transition-colors ${
-                            showAnswer[index] && option.startsWith(example.answer + ')')
-                              ? 'bg-green-100 border-green-500 font-semibold'
-                              : 'bg-gray-50 border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          {option}
-                        </div>
-                      ))}
+                      {example.options.map((option, optIndex) => {
+                        const optionLetter = option.charAt(0);
+                        const isSelected = selectedOptions[index] === optionLetter;
+                        const isCorrect = showAnswer[index] && option.startsWith(example.answer + ')');
+                        const isWrong = showAnswer[index] && isSelected && !isCorrect;
+                        
+                        return (
+                          <button
+                            key={optIndex}
+                            onClick={() => selectOption(index, optionLetter)}
+                            className={`w-full text-left p-3 rounded-lg border-2 transition-all ${
+                              isCorrect
+                                ? 'bg-green-100 border-green-500 font-semibold'
+                                : isWrong
+                                ? 'bg-red-100 border-red-500'
+                                : isSelected
+                                ? 'bg-blue-100 border-blue-500'
+                                : 'bg-gray-50 border-gray-200 hover:border-blue-300'
+                            }`}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
 

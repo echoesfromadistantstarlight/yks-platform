@@ -1,6 +1,7 @@
 // Detaylı konu anlatımları ve örnek sorular
 export const topicDetails = {
-  // TYT TÜRKÇE
+  // ============ TYT TÜRKÇE ============
+  
   "tyt-turkce-Paragraf": {
     title: "Paragraf",
     description: "TYT Türkçe'nin EN ÇOK SORU ÇIKAN bölümü. Test'in %55-60'ı paragraftan oluşur.",
@@ -50,7 +51,52 @@ export const topicDetails = {
     ]
   },
 
-  // TYT MATEMATİK  
+  "tyt-turkce-Sözcükte Anlam": {
+    title: "Sözcükte Anlam",
+    description: "Kelimelerin anlamları, eş-zıt anlamlı kelimeler, gerçek-mecaz anlam konuları.",
+    importance: "3-4 soru",
+    content: `
+### Sözcükte Anlam Konuları:
+
+#### 1. Gerçek ve Mecaz Anlam
+- **Gerçek Anlam:** Kelimenin sözlükteki ilk/asıl anlamı
+- **Mecaz Anlam:** Benzetme, aktarma yoluyla kazandığı anlam
+
+#### 2. Eş Anlamlı Kelimeler
+Anlamca birbirine yakın kelimeler: güzel=hoş=zarif
+
+#### 3. Zıt Anlamlı Kelimeler  
+Birbirine zıt anlamlı kelimeler: güzel↔çirkin, iyi↔kötü
+
+#### 4. Deyimler
+Kalıplaşmış söz grupları: "göz kulak olmak", "ağzı kulaklarında"
+    `,
+    examples: [],
+    tips: [
+      "En az 100 deyim ezberleyin",
+      "Kelimeleri mutlaka cümle içinde değerlendirin",
+      "Gerçek-mecaz ayrımında 'benzetme var mı?' sorusunu sorun"
+    ]
+  },
+
+  "tyt-turkce-Cümle Bilgisi": {
+    title: "Cümle Bilgisi",
+    description: "Cümle türleri, öğeleri ve cümle çözümleme.",
+    importance: "1-2 soru",
+    content: `
+### Cümle Öğeleri:
+- **Özne:** Yüklemin bildirdiği işi yapan
+- **Yüklem:** Cümlenin en önemli öğesi
+- **Nesne:** Yüklemin bildirdiği işten etkilenen
+- **Dolaylı Tümleç:** "-(y)e, -(y)a" ekini alan
+- **Zarf Tümleci:** Zaman, yer, durum bildiren
+    `,
+    examples: [],
+    tips: ["Cümle çözümlemesi yaparken önce yüklemi bulun", "Özne 'kim/ne?' sorusuyla bulunur"]
+  },
+
+  // ============ TYT MATEMATİK ============
+  
   "tyt-matematik-Problemler": {
     title: "Problemler",
     description: "TYT Matematik'in omurgası! En çok soru çıkan bölüm.",
