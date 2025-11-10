@@ -51,17 +51,17 @@ export const topicDetails = {
 
 // Eksik konular için varsayılan içerik
 export const getTopicDetail = (examType, subjectId, topicName) => {
-  const key = \`\${examType}-\${subjectId}-\${topicName}\`;
+  const key = `${examType}-${subjectId}-${topicName}`;
   return topicDetails[key] || {
     title: topicName,
     description: "Bu konu hakkında detaylı içerik hazırlanıyor...",
-    content: \`
+    content: `
 <div class="bg-yellow-50 p-6 rounded-xl">
   <h3 class="text-2xl font-bold text-yellow-900 mb-3">🚧 İçerik Hazırlanıyor</h3>
-  <p class="text-gray-700 text-lg">Bu konu için detaylı anlatım çok yakında eklenecek\!</p>
+  <p class="text-gray-700 text-lg">Bu konu için detaylı anlatım çok yakında eklenecek!</p>
 </div>
-    \`,
+    `,
     examples: [],
-    tips: ["Bu konuyu mutlaka çalışın\!", "Bol soru çözün\!"]
+    tips: ["Bu konuyu mutlaka çalışın!", "Bol soru çözün!"]
   };
 };
