@@ -11,18 +11,188 @@ export const topicDetails = {
 - Paragraf, bir düşünceyi veya konuyu işleyen, girintili ve mantıklı bir bütün oluşturan cümleler topluluğudur.
 - Ana fikir + Yardımcı fikirler şeklinde yapılandırılır.
 
-### Paragraf Soru Tipleri:
-1. **Ana Fikir/Ana Düşünce** (En çok çıkan!)
-2. **Konuun Belirlenmesi**
-3. **Paragrafın Amacı**
-4. **Paragrafta Verilen Bilgiler**
-5. **Anlatım Biçimleri**
-6. **Anlatım Özellikleri**
-7. **Bağdaşıklık (Cümle Sıralaması)**
-8. **Cümlenin Yeri**
-9. **Boşluk Doldurma**
+### 📚 Paragraf Soru Tipleri (DETAYLI ANLATI M):
 
-### Çözüm Stratejileri:
+---
+
+#### 1️⃣ ANA FİKİR / ANA DÜŞÜNCE (🔥 EN ÇOK ÇIKAN!)
+
+**Tanım:**
+Paragrafta anlatılmak istenen **asıl düşünce**, yazarın **iletmek istediği esas mesaj**.
+
+**Özellikler:**
+- Paragrafın TÜMÜNDE hakimdir
+- Genellikle **ilk** veya **son** cümlede bulunur
+- Yardımcı fikirler ana fikri DESTEKLER
+- Tek cümle ile ifade edilir
+
+**Soru Örnekleri:**
+- "Bu parçada aşağıdakilerden hangisi VURGULANMIŞTIR?"
+- "Parçanın ana düşüncesi aşağıdakilerden hangisidir?"
+- "Yazar bu parçada neyi anlatmak istemiştir?"
+
+**Çözüm Stratejisi:**
+✅ İlk cümleyi OKU - genelde buradadır
+✅ Son cümleyi OKU - burada da olabilir
+✅ Tekrar eden kelimelere DİKKAT
+✅ "Ama, ancak, fakat" gibi zıtlık bağlaçlarından SONRAKI kısım ÖNEMLİ
+✅ Seçenekleri okurken: "Bu parçanın TÜMÜNÜ karşılıyor mu?" sorusunu sor
+
+**Sık Yapılan Hatalar:**
+❌ Yardımcı fikri ana fikir sanmak
+❌ Parçada GEÇEN ama asıl mesaj olmayan bilgileri seçmek
+❌ Sadece bir cümleyi okuyup karar vermek
+
+---
+
+#### 2️⃣ KONUNUN BELİRLENMESİ
+
+**Tanım:**
+Paragrafta **sözü edilen varlık, olay veya durum**. Bir kelime veya kelime grubuyla ifade edilir.
+
+**Ana Fikir vs Konu Farkı:**
+- **Konu:** NEDİR? (1-2 kelime)
+- **Ana Fikir:** NE SÖYLENİYOR? (Cümle)
+
+**Örnek:**
+"Kitap okuma alışkanlığı, insanın kendini geliştirmesinin en temel yollarından biridir..."
+- KONU: Kitap okuma alışkanlığı
+- ANA FİKİR: Kitap okuma alışkanlığının önemi
+
+**Soru Örnekleri:**
+- "Bu parçanın konusu aşağıdakilerden hangisidir?"
+- "Parçada hangi kavram ele alınmıştır?"
+
+**Çözüm:**
+✅ Parçada EN ÇOK TEKRAR EDEN kelime/kavram
+✅ Başlıkta geçebilecek kelime
+✅ Kısa ve öz olmalı
+
+---
+
+#### 3️⃣ PARAGRAFIN AMACI
+
+**Tanım:**
+Yazarın bu paragrafı **NİYE yazdığı**, okuyucuyu **neye ikna etmek** istediği.
+
+**Amaç Türleri:**
+🎯 BİLGİLENDİRME - Bilgi aktarmak
+🎯 İKNA ETME - Okuyucuyu bir düşünceye ina ndırmak
+🎯 ELEŞTİRME - Bir durum/kişiyi eleştirmek
+🎯 ÖVME - Bir şeyi methetmek
+🎯 UYARMA - Dikkat çekmek, uyarmak
+🎯 EĞLENDİRME - Eğlendirmek, mizah
+
+**Soru Örnekleri:**
+- "Yazar bu parçada aşağıdakilerden hangisini amaçlamıştır?"
+- "Parçanın yazılış amacı nedir?"
+
+**Çözüm:**
+✅ Yazarın TAVRINI belirle (olumlu/olumsuz/tarafsız)
+✅ Fiillere dikkat: "anlatmak", "açıklamak", "vurgulamak", "eleştirmek"
+✅ Parçanın GENEL HAVAS INI anla
+
+---
+
+#### 4️⃣ PARAGRAFTA VERİLEN BİLGİLER
+
+**Tanım:**
+Parçada **açıkça söylenen** veya **anlaşılan** bilgiler.
+
+**Soru Örnekleri:**
+- "Bu parçadan aşağıdakilerden hangisi ANLAŞILIR?"
+- "Parçaya göre..."
+- "Parçada aşağıdakilerden hangisine DEĞİNİLMEMİŞTİR?"
+
+**Çözüm:**
+✅ ELEME yöntemi kullan
+✅ Seçenekleri parçayla ESLEŞTİR
+✅ Parçada GEÇEN ifadeleri bul
+✅ "Değinilmemiştir" sorularında: Parçada OLMAYANı bul
+
+**DİKKAT:**
+⚠️ Seçenekte farklı kelimelerle ifade edilebilir!
+Örnek: Parçada "zengin" geçiyorsa, seçenekte "varlıklı" yazabilir
+
+---
+
+#### 5️⃣ ANLATIM BİÇİMLERİ
+
+**Türleri:**
+
+**A) ÖYKÜLEME**
+- Olay anlatımı
+- Zaman sıralı akış
+- Kişiler, olay, yer, zaman var
+
+**B) BETİMLEME**
+- Tasvir, canlandırma
+- Duyulara hitap eden ifadeler
+- "...gibi", "sanki" kelimeleri
+
+**C) AÇIKLAMA**
+- Bilgi verme
+- Objektif anlatım
+- Tanım, örnek, karşılaştırma
+
+**D) TARTIŞMA**
+- Fikir ileri sürme
+- Kanıtlama, eleştirme
+- "...meli", "...malı" gibi öneri cümleler i
+
+---
+
+#### 6️⃣ BAĞDAŞIKLIK (CÜMLE SIRALAMASI)
+
+**Tanım:**
+Karışık verilen cümleleri MANTIĞI SIRAYA koymak.
+
+**Çözüm Stratejisi:**
+✅ **GİRİŞ cümlesini** bul (genellikle en genel ifade)
+✅ **SONUÇ cümlesini** bul ("bu nedenle", "sonuçta")
+✅ **BAĞLAÇLARA** dikkat:
+   - "Bu", "Bu nedenle" → Öncesine atıfta bulunur
+   - "Ancak", "Fakat" → Zıtlık bildirir
+   - "Ayrıca" → Ekleme yapar
+✅ **ZAMANLARA** dikkat (geçmiş → şimdi)
+✅ **SEBEP-SONUÇ** ilişkisi kur
+
+---
+
+#### 7️⃣ CÜMLENİN YERİ
+
+**Tanım:**
+Verilen cümlenin paragraftaki BOŞLUĞA uygun olup olmadığı.
+
+**Çözüm:**
+✅ Boşluktan ÖNCESİNE bak
+✅ Boşluktan SONRASINA bak
+✅ ANLAM BÜTÜNLÜĞÜNÜ kontrol et
+✅ BAĞLAÇLAR uyumlu olmalı
+
+---
+
+#### 8️⃣ BOŞLUK DOLDURMA
+
+**Tanım:**
+Boşaltılmış kelime/kelime grubunu bulma.
+
+**Çözüm:**
+✅ Boşluktan önce ve sonraki kelimelere BAK
+✅ ANLAMI tamamlayan kelimeyi bul
+✅ DİLBILGİSİ uyumuna dikkat
+
+---
+
+#### 9️⃣ PARÇADAN ÇIKAR ILABILECEK BİLGİLER
+
+**Tanım:**
+Parçadan YORUM yaparak ulaşılan bilgiler.
+
+**Çözüm:**
+✅ Direk yazılmamış ama ANLAT ILIYOR
+✅ Mantıksal ÇIKARIM yap
+✅ Abartılı seçeneklerden KAÇINi:
 ✅ İlk ve son cümlelere özellikle dikkat edin
 ✅ Tekrar eden kavramları belirleyin
 ✅ Bağlaçlara dikkat edin (çünkü, ancak, fakat, dolayısıyla)

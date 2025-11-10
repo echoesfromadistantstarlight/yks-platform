@@ -16,6 +16,11 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
       ...prev,
       [questionIndex]: option
     }));
+    // Şık seçilince otomatik olarak cevabı göster
+    setShowAnswer(prev => ({
+      ...prev,
+      [questionIndex]: true
+    }));
   };
 
   return (

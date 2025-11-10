@@ -83,17 +83,21 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                   return (
                     <div
                       key={index}
-                      className={`p-4 rounded-lg border-2 transition-all ${
+                      onClick={() => onTopicClick(examType, subject.id, topic.name, subject.color)}
+                      className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                         isCompleted
-                          ? 'bg-green-50 border-green-300'
-                          : 'bg-gray-50 border-gray-200 hover:border-blue-300'
+                          ? 'bg-green-50 border-green-300 hover:border-green-400'
+                          : 'bg-gray-50 border-gray-200 hover:border-blue-400 hover:bg-blue-50'
                       }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <button
-                              onClick={() => onToggleTopic(examType, subject.id, topic.name)}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onToggleTopic(examType, subject.id, topic.name);
+                              }}
                               className={`flex items-center justify-center w-6 h-6 rounded border-2 transition-all ${
                                 isCompleted
                                   ? 'bg-green-500 border-green-500'
@@ -102,14 +106,11 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                             >
                               {isCompleted && <Check className="w-4 h-4 text-white" />}
                             </button>
-                            <button
-                              onClick={() => onTopicClick(examType, subject.id, topic.name, subject.color)}
-                              className={`font-semibold hover:text-blue-600 transition-colors text-left ${
-                                isCompleted ? 'text-gray-500 line-through' : 'text-gray-900'
-                              }`}
-                            >
+                            <h4 className={`font-semibold text-left ${
+                              isCompleted ? 'text-gray-500 line-through' : 'text-gray-900'
+                            }`}>
                               {topic.name}
-                            </button>
+                            </h4>
                           </div>
 
                           <div className="flex flex-wrap gap-2 ml-8">
