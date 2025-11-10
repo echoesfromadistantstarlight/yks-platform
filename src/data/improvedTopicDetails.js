@@ -90,7 +90,14 @@ export const improvedTopicDetails = {
         <strong>Ancak bireysel farkındalık ve toplumsal sorumluluk ile bu sorun çözülebilir.</strong> 
         Geri dönüşüm, yenilenebilir enerji kaynaklarının kullanımı ve çevre dostu politikalar yaygınlaştırılmalıdır."
       </p>
-      <p class="font-semibold text-gray-900">Bu parçada aşağıdakilerden hangisi <strong>VURGULANMIŞTIR</strong>?</p>
+      <p class="font-semibold text-gray-900 mb-3">Bu parçada aşağıdakilerden hangisi <strong>VURGULANMIŞTIR</strong>?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Sanayi devriminin zararları</p>
+        <p class="text-gray-700"><strong>B)</strong> Fosil yakıt kullanımının artması</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>C) ✓</strong> Çevre kirliliğinin bireysel ve toplumsal önlemlerle çözülebileceği</p>
+        <p class="text-gray-700"><strong>D)</strong> Ormanların yok edilmesi</p>
+        <p class="text-gray-700"><strong>E)</strong> Küresel ısınmanın etkileri</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Son cümlelere dikkat! "Ancak" zıtlık bağlacından sonra ASIL MESAJ geliyor: 
         "Sorun çözülebilir" vurgusu yapılıyor. Ana fikir: <strong>Çevre kirliliği ciddi bir sorundur ancak 
