@@ -145,7 +145,14 @@ export const improvedTopicDetails = {
         Özellikle makine öğrenmesi ve derin öğrenme gibi yapay zeka dalları hızla gelişmektedir. 
         Ancak yapay zeka kullanımının etik boyutları da tartışılmaktadır."
       </p>
-      <p class="font-semibold text-gray-900">Bu parçanın konusu aşağıdakilerden hangisidir?</p>
+      <p class="font-semibold text-gray-900 mb-3">Bu parçanın konusu aşağıdakilerden hangisidir?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>A) ✓</strong> Yapay zeka</p>
+        <p class="text-gray-700"><strong>B)</strong> Teknolojinin gelişimi</p>
+        <p class="text-gray-700"><strong>C)</strong> Makine öğrenmesi</p>
+        <p class="text-gray-700"><strong>D)</strong> Etik sorunlar</p>
+        <p class="text-gray-700"><strong>E)</strong> Sağlık sektörü</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada EN ÇOK tekrar eden kavram "yapay zeka"dır. 
         Konu: <strong>Yapay zeka</strong> (2 kelime, kısa ve öz)
@@ -201,7 +208,14 @@ export const improvedTopicDetails = {
         okul başarıları düşmektedir. Aileler bu duruma duyarsız kalmayıp, 
         çocuklarının teknoloji kullanımını <strong>mutlaka sınırlandırmalıdır</strong>."
       </p>
-      <p class="font-semibold text-gray-900">Yazar bu parçada aşağıdakilerden hangisini amaçlamıştır?</p>
+      <p class="font-semibold text-gray-900 mb-3">Yazar bu parçada aşağıdakilerden hangisini amaçlamıştır?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Sosyal medyanın faydalarını anlatmak</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>B) ✓</strong> Aileleri uyarmak ve ikna etmek</p>
+        <p class="text-gray-700"><strong>C)</strong> Gençlerin durumunu eleştirmek</p>
+        <p class="text-gray-700"><strong>D)</strong> Teknolojinin gelişimini övmek</p>
+        <p class="text-gray-700"><strong>E)</strong> Eğitim sistemini sorgulamak</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> "Mutlaka sınırlandırmalıdır" ifadesi → UYARMA/İKNA ETME amacı.
         Amaç: <strong>Aileleri uyarmak, çocuklarının sosyal medya kullanımını kontrol etmeleri konusunda ikna etmek.</strong>
