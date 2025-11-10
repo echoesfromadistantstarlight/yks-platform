@@ -3,6 +3,7 @@ import { Home, BookOpen, TrendingUp, Calendar, Settings, GraduationCap, ChevronR
 import SubjectList from './SubjectList';
 import ProgressChart from './ProgressChart';
 import StudyPlan from './StudyPlan';
+import TopicDetail from './TopicDetail';
 import { yksData } from '../data/yksData';
 
 const Dashboard = ({ onBackToHome }) => {
