@@ -276,14 +276,14 @@ export const improvedTopicDetails = {
         "Düzenli uyku, insan sağlığı için son derece önemlidir. Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir. 
         Ayrıca yeterli uyku, hafıza ve öğrenme kapasitesini artırır. Uzmanlar, yetişkinlerin günde 7-8 saat uyuması gerektiğini belirtmektedir."
       </p>
-      <p class="font-semibold text-gray-900">Bu parçadan aşağıdakilerden hangisi ANLAŞILIR?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> Düzensiz uyku ciddi hastalıklara neden olur<br>
-        <strong>B)</strong> Uyku sırasında bağışıklık sistemi güçlenir ✓<br>
-        <strong>C)</strong> Her insan 7-8 saat uyumalıdır<br>
-        <strong>D)</strong> Uyku ilacı kullanmak zararlıdır<br>
-        <strong>E)</strong> Çocuklar daha az uyumalıdır
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Bu parçadan aşağıdakilerden hangisi ANLAŞILIR?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Düzensiz uyku ciddi hastalıklara neden olur</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>B) ✓</strong> Uyku sırasında bağışıklık sistemi güçlenir</p>
+        <p class="text-gray-700"><strong>C)</strong> Her insan 7-8 saat uyumalıdır</p>
+        <p class="text-gray-700"><strong>D)</strong> Uyku ilacı kullanmak zararlıdır</p>
+        <p class="text-gray-700"><strong>E)</strong> Çocuklar daha az uyumalıdır</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada "Uyku sırasında vücut kendini onarır, bağışıklık sistemi güçlenir" 
         cümlesi AÇIKÇA var. B şıkkı parçada GEÇİYOR. Diğerleri ya parçada yok, ya da aşırı genelleme.
@@ -341,14 +341,14 @@ export const improvedTopicDetails = {
         "Geçen yaz köyde geçirdiğimiz o unutulmaz günleri hiç unutmuyorum. Sabahları taze çiçek kokularıyla uyanır, 
         kuş sesleriyle güne başlardık. Büyükannemin bahçesinde koşuşturur, ağaçlardan meyve toplardık..."
       </p>
-      <p class="font-semibold text-gray-900">Bu parçada hangi anlatım biçimi AĞIRLIKLIDIR?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> Betimleme<br>
-        <strong>B)</strong> Öyküleme ✓<br>
-        <strong>C)</strong> Açıklama<br>
-        <strong>D)</strong> Tartışma<br>
-        <strong>E)</strong> Tanıtma
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Bu parçada hangi anlatım biçimi AĞIRLIKLIDIR?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Betimleme</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>B) ✓</strong> Öyküleme</p>
+        <p class="text-gray-700"><strong>C)</strong> Açıklama</p>
+        <p class="text-gray-700"><strong>D)</strong> Tartışma</p>
+        <p class="text-gray-700"><strong>E)</strong> Tanıtma</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada OLAY anlatılıyor (köyde geçirilen günler), zaman var (geçen yaz, sabahları), 
         kişiler var (ben, büyükannem). Bu ÖYKÜLEME'nin özelliğidir.
@@ -394,14 +394,14 @@ export const improvedTopicDetails = {
         <strong>III.</strong> Ayrıca dil becerilerini de artırır.<br>
         <strong>IV.</strong> Okuma, bilgi edinmenin en temel yollarından biridir.
       </p>
-      <p class="font-semibold text-gray-900">Yukarıdaki cümlelerin anlamlı sıralaması hangisidir?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> IV-II-III-I ✓<br>
-        <strong>B)</strong> I-II-III-IV<br>
-        <strong>C)</strong> II-III-IV-I<br>
-        <strong>D)</strong> IV-I-II-III<br>
-        <strong>E)</strong> II-IV-III-I
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Yukarıdaki cümlelerin anlamlı sıralaması hangisidir?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>A) ✓</strong> IV-II-III-I</p>
+        <p class="text-gray-700"><strong>B)</strong> I-II-III-IV</p>
+        <p class="text-gray-700"><strong>C)</strong> II-III-IV-I</p>
+        <p class="text-gray-700"><strong>D)</strong> IV-I-II-III</p>
+        <p class="text-gray-700"><strong>E)</strong> II-IV-III-I</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> <br>
         • IV ile başla (en genel ifade: "Okuma bilgi edinmenin yolu")<br>
@@ -439,14 +439,14 @@ export const improvedTopicDetails = {
       <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
         "Teknoloji hızla gelişiyor. <strong>(____)</strong> Bu durum toplumsal değişimleri de beraberinde getiriyor."
       </p>
-      <p class="font-semibold text-gray-900">Parçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> Ancak insanlar buna ayak uyduramıyor<br>
-        <strong>B)</strong> Yapay zeka önem kazanıyor ✓<br>
-        <strong>C)</strong> Gelecekte ne olacağı belirsiz<br>
-        <strong>D)</strong> Bu yüzden eğitim önemli<br>
-        <strong>E)</strong> Geçmişte daha iyiydi
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Parçadaki boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Ancak insanlar buna ayak uyduramıyor</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>B) ✓</strong> Yapay zeka önem kazanıyor</p>
+        <p class="text-gray-700"><strong>C)</strong> Gelecekte ne olacağı belirsiz</p>
+        <p class="text-gray-700"><strong>D)</strong> Bu yüzden eğitim önemli</p>
+        <p class="text-gray-700"><strong>E)</strong> Geçmişte daha iyiydi</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Öncesinde "Teknoloji gelişiyor", sonrasında "Bu durum toplumsal değişim getiriyor". 
         B şıkkı (Yapay zeka) teknolojinin GELİŞMESİNE örnek veriyor ve sonrasıyla uyumlu. "Bu durum" ifadesi 
@@ -482,14 +482,14 @@ export const improvedTopicDetails = {
       <p class="text-gray-800 leading-relaxed mb-3 italic bg-white p-4 rounded border-l-4 border-gray-400">
         "Spor yapmak, hem fiziksel hem de ruhsal sağlık için <strong>________</strong>."
       </p>
-      <p class="font-semibold text-gray-900">Boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> zararlıdır<br>
-        <strong>B)</strong> önemsizdir<br>
-        <strong>C)</strong> gereklidir ✓<br>
-        <strong>D)</strong> pahalıdır<br>
-        <strong>E)</strong> gereksizdir
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Boşluğa aşağıdakilerden hangisi getirilmelidir?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> zararlıdır</p>
+        <p class="text-gray-700"><strong>B)</strong> önemsizdir</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>C) ✓</strong> gereklidir</p>
+        <p class="text-gray-700"><strong>D)</strong> pahalıdır</p>
+        <p class="text-gray-700"><strong>E)</strong> gereksizdir</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> "Spor yapmak sağlık için..." cümlesinin ANLAMI olumlu olmalı. 
         Dilbilgisi: "-dır" eki var, sıfat/isim gerekli. C şıkkı hem anlamca hem dilbilgisi olarak uygun.
@@ -525,14 +525,14 @@ export const improvedTopicDetails = {
         "Yazarın tüm romanları çok satmıştır. Son kitabı da kısa sürede tükendi. 
         Okuyucular yeni kitabını merakla bekliyor."
       </p>
-      <p class="font-semibold text-gray-900">Bu parçadan aşağıdakilerden hangisi ÇIKARILIR?</p>
-      <p class="text-sm text-gray-600 mt-3">
-        <strong>A)</strong> Yazar çok zengindir<br>
-        <strong>B)</strong> Yazar popüler bir yazardır ✓<br>
-        <strong>C)</strong> Yazar en iyi yazardır<br>
-        <strong>D)</strong> Yazar başka kitap yazmayacak<br>
-        <strong>E)</strong> Yazar hiç ödül almamıştır
-      </p>
+      <p class="font-semibold text-gray-900 mb-3">Bu parçadan aşağıdakilerden hangisi ÇIKARILIR?</p>
+      <div class="bg-white p-4 rounded-lg border space-y-2">
+        <p class="text-gray-700"><strong>A)</strong> Yazar çok zengindir</p>
+        <p class="text-gray-700 bg-green-100 p-2 rounded font-semibold"><strong>B) ✓</strong> Yazar popüler bir yazardır</p>
+        <p class="text-gray-700"><strong>C)</strong> Yazar en iyi yazardır</p>
+        <p class="text-gray-700"><strong>D)</strong> Yazar başka kitap yazmayacak</p>
+        <p class="text-gray-700"><strong>E)</strong> Yazar hiç ödül almamıştır</p>
+      </div>
       <p class="text-sm text-gray-600 mt-3">
         <strong>ÇÖZÜM:</strong> Parçada "tüm romanları çok sattı", "son kitabı tükendi", "okuyucular bekliyor" 
         ifadeleri var. Bunlardan YORUM yaparsak: Yazar POPÜLER. A aşırı genelleme, C abartı, D parçada yok.
