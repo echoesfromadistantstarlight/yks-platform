@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Check, AlertCircle, Clock } from 'lucide-react';
 import { getPriorityColor, getPriorityLabel } from '../data/yksData';
 
-const SubjectList = ({ exam, examType, progress, onToggleTopic }) => {
+const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) => {
   const [expandedSubjects, setExpandedSubjects] = useState({});
 
   const toggleSubject = (subjectId) => {
@@ -102,9 +102,14 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic }) => {
                             >
                               {isCompleted && <Check className="w-4 h-4 text-white" />}
                             </button>
-                            <h4 className={`font-semibold ${isCompleted ? 'text-gray-500 line-through' : 'text-gray-900'}`}>
+                            <button
+                              onClick={() => onTopicClick(examType, subject.id, topic.name, subject.color)}
+                              className={`font-semibold hover:text-blue-600 transition-colors text-left ${
+                                isCompleted ? 'text-gray-500 line-through' : 'text-gray-900'
+                              }`}
+                            >
                               {topic.name}
-                            </h4>
+                            </button>
                           </div>
 
                           <div className="flex flex-wrap gap-2 ml-8">

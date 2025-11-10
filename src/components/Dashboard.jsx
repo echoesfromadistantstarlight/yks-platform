@@ -12,6 +12,7 @@ const Dashboard = ({ onBackToHome }) => {
     return saved ? JSON.parse(saved) : {};
   });
   const [activeTab, setActiveTab] = useState('subjects');
+  const [selectedTopic, setSelectedTopic] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('yks-progress', JSON.stringify(progress));
@@ -23,6 +24,19 @@ const Dashboard = ({ onBackToHome }) => {
       ...prev,
       [key]: !prev[key]
     }));
+  };
+
+  const openTopicDetail = (examType, subjectId, topicName, subjectColor) => {
+    setSelectedTopic({ examType, subjectId, topicName, subjectColor });
+  };
+
+  const closeTopicDetail = () => {
+    setSelectedTopic(null);
+  };
+
+  const isTopicCompleted = (examType, subjectId, topicName) => {
+    const key = `${examType}-${subjectId}-${topicName}`;
+    return progress[key] || false;
   };
 
   const calculateProgress = (examType) => {
@@ -49,6 +63,23 @@ const Dashboard = ({ onBackToHome }) => {
     { id: 'progress', label: 'İlerleme', icon: <TrendingUp className="w-5 h-5" /> },
     { id: 'plan', label: 'Çalışma Planı', icon: <Calendar className="w-5 h-5" /> }
   ];
+
+  // Eğer konu detayı seçiliyse, onu göster
+  if (selectedTopic) {
+    return (
+      <TopicDetail
+        examType={selectedTopic.examType}
+        subjectId={selectedTopic.subjectId}
+        topicName={selectedTopic.topicName}
+        subjectColor={selectedTopic.subjectColor}
+        onBack={closeTopicDetail}
+        onComplete={() => {
+          toggleTopic(selectedTopic.examType, selectedTopic.subjectId, selectedTopic.topicName);
+        }}
+        isCompleted={isTopicCompleted(selectedTopic.examType, selectedTopic.subjectId, selectedTopic.topicName)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -183,6 +214,7 @@ const Dashboard = ({ onBackToHome }) => {
               examType={selectedExam}
               progress={progress}
               onToggleTopic={toggleTopic}
+              onTopicClick={openTopicDetail}
             />
           </div>
         )}
