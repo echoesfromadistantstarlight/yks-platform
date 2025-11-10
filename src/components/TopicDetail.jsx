@@ -51,22 +51,6 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                 <span>{isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}</span>
               </button>
             </div>
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span>Geri Dön</span>
-            </button>
-            
-            <button
-              onClick={onComplete}
-              className={`flex items-center space-x-2 px-6 py-2 rounded-lg font-semibold transition-all ${
-                isCompleted
-                  ? 'bg-green-500 text-white'
-                  : 'bg-blue-500 hover:bg-blue-600 text-white'
-              }`}
-            >
-              <CheckCircle2 className="w-5 h-5" />
-              <span>{isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}</span>
-            </button>
           </div>
         </div>
       </div>
