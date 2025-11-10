@@ -87,32 +87,21 @@ const Dashboard = ({ onBackToHome }) => {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={onBackToHome}
-                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                  <GraduationCap className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="font-bold text-gray-900">YKS Hazırlık</div>
-                  <div className="text-xs text-gray-500">2026 Platform</div>
-                </div>
-              </button>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-lg">
-                <span className="text-sm font-medium text-blue-900">TYT İlerleme:</span>
-                <span className="text-sm font-bold text-blue-600">{tytProgress}%</span>
-              </div>
-              <div className="hidden md:flex items-center space-x-2 bg-purple-50 px-4 py-2 rounded-lg">
-                <span className="text-sm font-medium text-purple-900">AYT İlerleme:</span>
-                <span className="text-sm font-bold text-purple-600">{aytProgress}%</span>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8 gap-4">
+            <div className="flex items-center space-x-3 sm:space-x-4">
+              <GraduationCap className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600" />
+              <div>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">YKS Konu Takip</h1>
+                <p className="text-sm sm:text-base text-gray-600">2026 Sınav Dönemi</p>
               </div>
             </div>
+            <button
+              onClick={onBackToHome}
+              className="flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:from-red-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
+            >
+              <Home className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-semibold">Ana Sayfa</span>
+            </button>
           </div>
         </div>
       </header>

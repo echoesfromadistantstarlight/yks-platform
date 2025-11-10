@@ -32,21 +32,21 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
               onClick={() => toggleSubject(subject.id)}
               className="w-full flex items-center justify-between"
             >
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 sm:space-x-4">
                 <div 
-                  className="w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center text-white font-bold text-lg sm:text-xl"
                   style={{ backgroundColor: subject.color }}
                 >
                   {subject.questions}
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold text-gray-900">{subject.name}</h3>
-                  <p className="text-sm text-gray-500">
-                    {subject.questions} Soru • {subjectProgress.completed}/{subjectProgress.total} Konu Tamamlandı
+                  <h3 className="text-base sm:text-xl font-bold text-gray-900">{subject.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">
+                    {subject.questions} Soru • {subjectProgress.completed}/{subjectProgress.total} Konu
                   </p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 sm:space-x-4">
                 <div className="text-right">
                   <div className="text-2xl font-bold" style={{ color: subject.color }}>
                     {subjectProgress.percentage}%
@@ -84,7 +84,7 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                     <div
                       key={index}
                       onClick={() => onTopicClick(examType, subject.id, topic.name, subject.color)}
-                      className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
+                      className={`p-3 sm:p-4 rounded-lg border-2 transition-all cursor-pointer ${
                         isCompleted
                           ? 'bg-green-50 border-green-300 hover:border-green-400'
                           : 'bg-gray-50 border-gray-200 hover:border-blue-400 hover:bg-blue-50'
@@ -92,7 +92,7 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
-                          <div className="flex items-center space-x-2 mb-2">
+                          <div className="flex items-center space-x-2 mb-1 sm:mb-2">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();

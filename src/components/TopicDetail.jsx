@@ -25,14 +25,32 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-4 sm:p-6 md:p-8">
       {/* Header */}
       <div className="bg-white shadow-lg sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <button
-              onClick={onBack}
-              className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+        <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <button
+                onClick={onBack}
+                className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                <span>Geri Dön</span>
+              </button>
+              
+              <button
+                onClick={onComplete}
+                className={`flex items-center space-x-2 px-6 py-2 rounded-lg font-semibold transition-all ${
+                  isCompleted
+                    ? 'bg-green-500 text-white'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                }`}
+              >
+                <CheckCircle2 className="w-5 h-5" />
+                <span>{isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}</span>
+              </button>
+            </div>
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Geri Dön</span>
