@@ -1,6 +1,13 @@
 import { GraduationCap, BookOpen, Target, TrendingUp, Clock, CheckCircle2, Sparkles, Award, BarChart3, Calendar } from 'lucide-react';
 
 const LandingPage = ({ onStart }) => {
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const features = [
     {
       icon: <Target className="w-8 h-8" />,
@@ -98,13 +105,13 @@ const LandingPage = ({ onStart }) => {
                 <span>Hemen Başla</span>
                 <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               </button>
-              <a 
-                href="#features" 
+              <button
+                onClick={scrollToFeatures}
                 className="btn-secondary flex items-center space-x-2 text-lg px-8 py-4"
               >
                 <span>Özellikleri Keşfet</span>
                 <TrendingUp className="w-5 h-5" />
-              </a>
+              </button>
             </div>
 
             {/* Stats */}
