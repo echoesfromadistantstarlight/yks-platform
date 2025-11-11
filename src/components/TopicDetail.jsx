@@ -86,11 +86,11 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         <div className="bg-white rounded-none xs:rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-2 xs:p-2.5 sm:p-3 md:p-4 lg:p-5 mb-1.5 xs:mb-2 sm:mb-3 md:mb-4 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
           <div className="flex flex-col sm:flex-row items-start gap-2 xs:gap-2.5 sm:gap-3 md:gap-4">
             <div className="p-1.5 xs:p-2 sm:p-2.5 md:p-3 lg:p-4 rounded-md sm:rounded-lg" style={{ backgroundColor: subjectColor, color: 'white' }}>
-              <BookOpen className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10" />
+              <BookOpen className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" />
             </div>
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 xs:gap-1.5 sm:gap-2 mb-1 xs:mb-1.5 sm:mb-2">
-                <h1 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">{topicData.title}</h1>
+                <h1 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 leading-tight">{topicData.title}</h1>
                 <span className="px-2 xs:px-2.5 py-0.5 bg-red-500 text-white text-[10px] xs:text-xs font-bold rounded-full inline-block">
                   {topicData.importance}
                 </span>
@@ -111,11 +111,11 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
             <div className="p-1 xs:p-1.5 sm:p-2 bg-blue-500 rounded-md sm:rounded-lg">
               <BookOpen className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-white" />
             </div>
-            <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900">Konu Anlatımı</h2>
+            <h2 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">Konu Anlatımı</h2>
           </div>
-          <div className="prose prose-sm xs:prose sm:prose-lg max-w-none">
+          <div className="prose prose-sm xs:prose max-w-none">
             <div 
-              className="text-[11px] xs:text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed"
+              className="text-[11px] xs:text-xs sm:text-sm md:text-sm lg:text-base text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: topicData.content }}
             />
           </div>
@@ -128,7 +128,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               <div className="p-1 xs:p-1.5 sm:p-2 bg-purple-500 rounded-md sm:rounded-lg">
                 <FileQuestion className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900">Örnek Sorular</h2>
+              <h2 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">Örnek Sorular</h2>
             </div>
             
             {/* Quiz Completed - Score Display */}
@@ -283,7 +283,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               <div className="p-1 xs:p-1.5 sm:p-2 bg-orange-500 rounded-md sm:rounded-lg">
                 <Lightbulb className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900">💡 Çalışma İpuçları</h2>
+              <h2 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">💡 Çalışma İpuçları</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 xs:gap-2.5 sm:gap-3 md:gap-4">
