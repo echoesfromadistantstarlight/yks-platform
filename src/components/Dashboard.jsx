@@ -117,7 +117,7 @@ const Dashboard = ({ onBackToHome }) => {
     
     message += `━━━━━━━━━━━━━━━━━━━━\n`;
     message += `📅 Tarih: ${new Date().toLocaleDateString('tr-TR')}\n`;
-    message += `🚀 Platform: YKS Konu Takip Sistemi`;
+    message += `🚀 Platform: YKS Ana Ünite Takip Sistemi`;
 
     // WhatsApp URL'i oluştur - Direkt öğretmene gönder
     const phoneNumber = '905525237453'; // Türkiye +90 ile
@@ -159,7 +159,7 @@ const Dashboard = ({ onBackToHome }) => {
             <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 min-w-0 flex-1">
               <GraduationCap className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-blue-600 flex-shrink-0" />
               <div className="min-w-0">
-                <h1 className="text-sm xs:text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight truncate">YKS Konu Takip</h1>
+                <h1 className="text-sm xs:text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight truncate">YKS Ana Ünite Takip</h1>
                 <p className="text-[10px] xs:text-xs sm:text-sm text-gray-600 hidden xs:block">2026 Sınav Dönemi</p>
               </div>
             </div>

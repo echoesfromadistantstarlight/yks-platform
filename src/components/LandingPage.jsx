@@ -21,13 +21,13 @@ const LandingPage = ({ onStart }) => {
   const features = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Konu Takip Sistemi",
-      description: "TYT ve AYT'deki tüm konuları izleyin, ilerlemenizi takip edin"
+      title: "Ana Ünite Takip Sistemi",
+      description: "TYT ve AYT'deki tüm ana üniteleri izleyin, ilerlemenizi takip edin"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Soru Dağılımları",
-      description: "Hangi konudan kaç soru çıkacağını öğrenin ve ona göre planlayın"
+      description: "Hangi ana üniteden kaç soru çıkacağını öğrenin ve ona göre planlayın"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -37,12 +37,12 @@ const LandingPage = ({ onStart }) => {
     {
       icon: <Calendar className="w-8 h-8" />,
       title: "Çalışma Planı",
-      description: "Öncelikli konulara göre otomatik çalışma planı oluşturun"
+      description: "Öncelikli ana ünitelere göre otomatik çalışma planı oluşturun"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Öncelik Sistemi",
-      description: "Hangi konulara yoğunlaşmanız gerektiğini keşfedin"
+      description: "Hangi ana ünitelere yoğunlaşmanız gerektiğini keşfedin"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -54,7 +54,7 @@ const LandingPage = ({ onStart }) => {
   const stats = [
     { number: "120", label: "TYT Soru", icon: <BookOpen /> },
     { number: "80", label: "AYT Soru", icon: <BookOpen /> },
-    { number: "300+", label: "Konu Başlığı", icon: <Target /> },
+    { number: "300+", label: "Ana Ünite", icon: <Target /> },
     { number: "100%", label: "Ücretsiz", icon: <CheckCircle2 /> }
   ];
 
@@ -105,7 +105,7 @@ const LandingPage = ({ onStart }) => {
             </h1>
             
             <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-600 mb-6 xs:mb-7 sm:mb-8 leading-relaxed max-w-2xl mx-auto px-2">
-              YKS 2026 sınavına hazırlanırken hangi konuya ne kadar zaman ayırman gerektiğini 
+              YKS 2026 sınavına hazırlanırken hangi ana üniteye ne kadar zaman ayırman gerektiğini 
               öğren, ilerlemeyi takip et ve hedefine emin adımlarla ilerle.
             </p>
 
@@ -205,7 +205,7 @@ const LandingPage = ({ onStart }) => {
                 <div>
                   <h3 className="font-bold text-lg mb-2">Zaman Tasarrufu</h3>
                   <p className="text-gray-600">
-                    Hangi konuya ne kadar zaman ayırman gerektiğini bilirsin, gereksiz konularda zaman kaybetmezsin
+                    Hangi ana üniteye ne kadar zaman ayırman gerektiğini bilirsin, gereksiz konularda zaman kaybetmezsin
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ const LandingPage = ({ onStart }) => {
                 <div>
                   <h3 className="font-bold text-lg mb-2">Odaklanmış Çalışma</h3>
                   <p className="text-gray-600">
-                    En çok soru çıkan konulara odaklan, net sayını maksimize et
+                    En çok soru çıkan ana ünitelere odaklan, net sayını maksimize et
                   </p>
                 </div>
               </div>

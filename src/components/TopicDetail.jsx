@@ -111,7 +111,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
             <div className="p-1 xs:p-1.5 sm:p-2 bg-blue-500 rounded-md sm:rounded-lg">
               <BookOpen className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-white" />
             </div>
-            <h2 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">Konu Anlatımı</h2>
+            <h2 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900">Ana Ünite Anlatımı</h2>
           </div>
           <div className="prose prose-sm xs:prose max-w-none">
             <div 
@@ -303,7 +303,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         <div className="mt-8 card bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300">
           <div className="text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-4">
-              {isCompleted ? '✅ Bu konuyu tamamladınız!' : 'Konuyu bitirdiniz mi?'}
+              {isCompleted ? '✅ Bu ana üniteyi tamamladınız!' : 'Ana üniteyi bitirdiniz mi?'}
             </h3>
             <button
               onClick={onComplete}
@@ -313,7 +313,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                   : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
               }`}
             >
-              {isCompleted ? 'Tamamlandı Olarak İşaretle ✓' : 'Konuyu Tamamla 🎯'}
+              {isCompleted ? 'Tamamlandı Olarak İşaretle ✓' : 'Ana Üniteyi Tamamla 🎯'}
             </button>
           </div>
         </div>

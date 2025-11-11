@@ -81,7 +81,7 @@ const StudyPlan = ({ progress, yksData }) => {
             <h3 className="text-lg font-bold text-red-900">Yüksek Öncelik</h3>
           </div>
           <div className="text-4xl font-bold text-red-600">{highPriority.length}</div>
-          <p className="text-sm text-red-700 mt-1">Bu konulara hemen başla!</p>
+          <p className="text-sm text-red-700 mt-1">Bu ana ünitelere hemen başla!</p>
         </div>
 
         <div className="card bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200">
@@ -112,7 +112,7 @@ const StudyPlan = ({ progress, yksData }) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">🔥 Önce Bunlara Odaklan!</h2>
-              <p className="text-gray-600">En çok soru çıkan ve önemli konular</p>
+              <p className="text-gray-600">En çok soru çıkan ve önemli ana üniteler</p>
             </div>
           </div>
           <div className="space-y-3">
@@ -160,7 +160,7 @@ const StudyPlan = ({ progress, yksData }) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">⚡ Bunları da Unutma!</h2>
-              <p className="text-gray-600">Orta öncelikli konular</p>
+              <p className="text-gray-600">Orta öncelikli ana üniteler</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -191,7 +191,7 @@ const StudyPlan = ({ progress, yksData }) => {
           <Target className="w-16 h-16 mx-auto mb-4" />
           <h2 className="text-3xl font-bold mb-2">🎉 Tebrikler!</h2>
           <p className="text-xl text-green-100">
-            Tüm konuları tamamladın! Şimdi tekrar ve deneme sınavlarına odaklanabilirsin.
+            Tüm ana üniteleri tamamladın! Şimdi tekrar ve deneme sınavlarına odaklanabilirsin.
           </p>
         </div>
       )}
