@@ -66,9 +66,17 @@ const Dashboard = ({ onBackToHome }) => {
     let completedTopics = 0;
     const completedBySubject = {};
     
+    // Sayısal öğrenci için sadece gerekli dersler
+    const sayisalSubjects = ['turkce', 'matematik', 'fen', 'sosyal', 'ayt-matematik', 'ayt-fizik', 'ayt-kimya', 'ayt-biyoloji'];
+    
     ['tyt', 'ayt'].forEach(examType => {
       const exam = yksData[examType];
       exam.subjects.forEach(subject => {
+        // Sayısal öğrenci için filtreleme: TDE, Tarih, Coğrafya HARİÇ
+        if (examType === 'ayt' && !['ayt-matematik', 'ayt-fizik', 'ayt-kimya', 'ayt-biyoloji'].includes(subject.id)) {
+          return; // TDE, Tarih, Coğrafya'yı atla
+        }
+        
         const subjectKey = `${examType.toUpperCase()} - ${subject.name}`;
         completedBySubject[subjectKey] = { completed: 0, total: subject.topics.length };
         
