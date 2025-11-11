@@ -71,7 +71,7 @@ const ProgressChart = ({ tytProgress, aytProgress, progress, yksData }) => {
 
         <div className="card bg-gradient-to-br from-green-500 to-green-600 text-white">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Toplam Konu</h3>
+            <h3 className="text-lg font-semibold">Toplam Ana Ünite</h3>
             <Award className="w-6 h-6" />
           </div>
           <div className="text-4xl font-bold mb-2">{totalCompleted}</div>
