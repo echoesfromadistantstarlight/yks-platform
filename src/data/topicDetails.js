@@ -1,6 +1,14 @@
 // Detaylı konu anlatımları ve örnek sorular
 import { improvedTopicDetails } from './improvedTopicDetails';
 import { sozcukteAnlamContent } from './sozcukteAnlamContent';
+import { sozYorumuContent, sozYorumuExamples, sozYorumuTips } from './sozYorumuContent';
+import { cumlededeAnlamContent, cumlededeAnlamExamples, cumlededeAnlamTips } from './cumlededeAnlamContent';
+import { sesBilgisiContent, sesBilgisiExamples, sesBilgisiTips } from './sesBilgisiContent';
+import { yazimKurallariContent, yazimKurallariExamples, yazimKurallariTips } from './yazimKurallariContent';
+import { sozcukteYapiContent, sozcukteYapiExamples, sozcukteYapiTips } from './sozcukteYapiContent';
+import { sozcukTurleriContent, sozcukTurleriExamples, sozcukTurleriTips } from './sozcukTurleriContent';
+import { fiillerContent, fiillerExamples, fiillerTips } from './fiillerContent';
+import { cumleBilgisiContent, cumleBilgisiExamples, cumleBilgisiTips } from './cumleBilgisiContent';
 
 export const topicDetails = {
   // Improved HTML formatında içerik
@@ -109,20 +117,76 @@ export const topicDetails = {
     ]
   },
 
+  "tyt-turkce-Söz Yorumu": {
+    title: "Söz Yorumu",
+    description: "Deyimler, atasözleri, ikilemeler, kalıp sözler. TYT'de 2-3 soru çıkar.",
+    importance: "2-3 soru",
+    content: sozYorumuContent,
+    examples: sozYorumuExamples,
+    tips: sozYorumuTips
+  },
+
+  "tyt-turkce-Cümlede Anlam": {
+    title: "Cümlede Anlam",
+    description: "Deyimleşmiş birleşik fiiller, anlamca kaynaşmış söz öbekleri, cümlenin gerçek-mecaz anlamları, söz sanatları.",
+    importance: "2-3 soru",
+    content: cumlededeAnlamContent,
+    examples: cumlededeAnlamExamples,
+    tips: cumlededeAnlamTips
+  },
+
+  "tyt-turkce-Ses Bilgisi": {
+    title: "Ses Bilgisi",
+    description: "Ses olayları ve ünlü-ünsüz uyumları.",
+    importance: "1 soru",
+    content: sesBilgisiContent,
+    examples: sesBilgisiExamples,
+    tips: sesBilgisiTips
+  },
+
+  "tyt-turkce-Yazım Kuralları ve Noktalama": {
+    title: "Yazım Kuralları ve Noktalama",
+    description: "Büyük-küçük harf, bitişik-ayrı yazım, noktalama işaretleri.",
+    importance: "1-2 soru",
+    content: yazimKurallariContent,
+    examples: yazimKurallariExamples,
+    tips: yazimKurallariTips
+  },
+
+  "tyt-turkce-Sözcükte Yapı": {
+    title: "Sözcükte Yapı",
+    description: "Yapım ekleri, çekim ekleri, ek fiil.",
+    importance: "1-2 soru",
+    content: sozcukteYapiContent,
+    examples: sozcukteYapiExamples,
+    tips: sozcukteYapiTips
+  },
+
+  "tyt-turkce-Sözcük Türleri": {
+    title: "Sözcük Türleri",
+    description: "İsimler, zamirler, sıfatlar, zarflar, edat, bağlaç, ünlem.",
+    importance: "1-2 soru",
+    content: sozcukTurleriContent,
+    examples: sozcukTurleriExamples,
+    tips: sozcukTurleriTips
+  },
+
+  "tyt-turkce-Fiiller": {
+    title: "Fiiller",
+    description: "Fiilde anlam (kip-kişi-yapı), fiilimsi (isim-fiil, sıfat-fiil, zarf-fiil), fiilde çatı.",
+    importance: "1-2 soru",
+    content: fiillerContent,
+    examples: fiillerExamples,
+    tips: fiillerTips
+  },
+
   "tyt-turkce-Cümle Bilgisi": {
     title: "Cümle Bilgisi",
-    description: "Cümle öğeleri ve türleri.",
+    description: "Sözcük grupları, cümlenin ögeleri, cümle türleri, anlatım bozukluğu.",
     importance: "1-2 soru",
-    content: `
-<div class="space-y-4">
-  <div class="bg-purple-50 p-4 rounded-lg">
-    <h3 class="text-xl font-bold text-purple-900 mb-2">📐 Cümle Bilgisi</h3>
-    <p class="text-gray-700">Cümle öğeleri ve çözümleme</p>
-  </div>
-</div>
-    `,
-    examples: [],
-    tips: ["Önce yüklemi bul", "Özne 'kim/ne?' sorusuyla bulunur"]
+    content: cumleBilgisiContent,
+    examples: cumleBilgisiExamples,
+    tips: cumleBilgisiTips
   }
 };
 
