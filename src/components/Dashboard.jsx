@@ -99,7 +99,7 @@ const Dashboard = ({ onBackToHome }) => {
     message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
     
     message += `📊 *GENEL DURUM*\n`;
-    message += `✅ Tamamlanan Konu: *${completedTopics}/${totalTopics}*\n`;
+    message += `✅ Tamamlanan Ana Ünite: *${completedTopics}/${totalTopics}*\n`;
     message += `📈 Genel İlerleme: *%${overallProgress}*\n`;
     message += `🎯 TYT İlerleme: *%${tytProgress}*\n`;
     message += `🎯 AYT İlerleme: *%${aytProgress}*\n\n`;
@@ -112,7 +112,7 @@ const Dashboard = ({ onBackToHome }) => {
       const bar = '█'.repeat(Math.floor(percentage / 10)) + '░'.repeat(10 - Math.floor(percentage / 10));
       message += `*${subject}*\n`;
       message += `${bar} %${percentage}\n`;
-      message += `${data.completed}/${data.total} konu tamamlandı\n\n`;
+      message += `${data.completed}/${data.total} ana ünite tamamlandı\n\n`;
     });
     
     message += `━━━━━━━━━━━━━━━━━━━━\n`;
@@ -185,16 +185,43 @@ const Dashboard = ({ onBackToHome }) => {
           <div className="flex flex-wrap gap-2 xs:gap-2.5 sm:gap-3 md:gap-4 mb-3 xs:mb-4">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-md sm:rounded-lg px-2.5 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3">
               <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Toplam İlerleme</div>
-              <div className="text-lg xs:text-xl sm:text-2xl font-bold">{Math.round((tytProgress + aytProgress) / 2)}%</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold">
+                {(() => {
+                  let total = 0;
+                  let completed = 0;
+                  ['tyt', 'ayt'].forEach(examType => {
+                    const exam = yksData[examType];
+                    exam.subjects.forEach(subject => {
+                      if (examType === 'ayt' && !['matematik', 'fizik', 'kimya', 'biyoloji'].includes(subject.id)) return;
+                      subject.topics.forEach(topic => {
+                        total++;
+                        const key = `${examType}-${subject.id}-${topic.name}`;
+                        if (progress[key]) completed++;
+                      });
+                    });
+                  });
+                  return total > 0 ? Math.round((completed / total) * 100) : 0;
+                })()}%
+              </div>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-md sm:rounded-lg px-2.5 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3">
-              <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Tamamlanan Konular</div>
+              <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Tamamlanan Ana Üniteler</div>
               <div className="text-lg xs:text-xl sm:text-2xl font-bold">
-                {Object.values(progress).filter(Boolean).length}/{(() => {
+                {(() => {
                   let total = 0;
-                  yksData.tyt.subjects.forEach(subject => total += subject.topics.length);
-                  yksData.ayt.subjects.forEach(subject => total += subject.topics.length);
-                  return total;
+                  let completed = 0;
+                  ['tyt', 'ayt'].forEach(examType => {
+                    const exam = yksData[examType];
+                    exam.subjects.forEach(subject => {
+                      if (examType === 'ayt' && !['matematik', 'fizik', 'kimya', 'biyoloji'].includes(subject.id)) return;
+                      subject.topics.forEach(topic => {
+                        total++;
+                        const key = `${examType}-${subject.id}-${topic.name}`;
+                        if (progress[key]) completed++;
+                      });
+                    });
+                  });
+                  return `${completed}/${total}`;
                 })()}
               </div>
             </div>

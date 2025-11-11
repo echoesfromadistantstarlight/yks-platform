@@ -75,7 +75,7 @@ const ProgressChart = ({ tytProgress, aytProgress, progress, yksData }) => {
             <Award className="w-6 h-6" />
           </div>
           <div className="text-4xl font-bold mb-2">{totalCompleted}</div>
-          <div className="text-sm opacity-90">/ {totalTopics} konu tamamlandı</div>
+          <div className="text-sm opacity-90">/ {totalTopics} ana ünite tamamlandı</div>
         </div>
       </div>
 
