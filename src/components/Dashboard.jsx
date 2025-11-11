@@ -111,8 +111,9 @@ const Dashboard = ({ onBackToHome }) => {
     message += `📅 Tarih: ${new Date().toLocaleDateString('tr-TR')}\n`;
     message += `🚀 Platform: YKS Konu Takip Sistemi`;
 
-    // WhatsApp URL'i oluştur
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    // WhatsApp URL'i oluştur - Direkt öğretmene gönder
+    const phoneNumber = '905525237453'; // Türkiye +90 ile
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     // Yeni sekmede aç
     window.open(whatsappUrl, '_blank');
