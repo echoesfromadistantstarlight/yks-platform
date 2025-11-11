@@ -87,20 +87,20 @@ const Dashboard = ({ onBackToHome }) => {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-3 xs:py-4">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 xs:gap-4">
-            <div className="flex items-center gap-2.5 xs:gap-3 sm:gap-4">
-              <GraduationCap className="w-8 h-8 xs:w-10 xs:h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 text-blue-600" />
-              <div>
-                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">YKS Konu Takip</h1>
-                <p className="text-xs xs:text-sm sm:text-base text-gray-600">2026 Sınav Dönemi</p>
+          <div className="flex items-center justify-between gap-2 xs:gap-3">
+            <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 min-w-0 flex-1">
+              <GraduationCap className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-blue-600 flex-shrink-0" />
+              <div className="min-w-0">
+                <h1 className="text-sm xs:text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight truncate">YKS Konu Takip</h1>
+                <p className="text-[10px] xs:text-xs sm:text-sm text-gray-600 hidden xs:block">2026 Sınav Dönemi</p>
               </div>
             </div>
             <button
               onClick={onBackToHome}
-              className="flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg sm:rounded-xl hover:from-red-600 hover:to-pink-600 active:scale-[0.98] transition-all shadow-lg hover:shadow-xl text-xs xs:text-sm sm:text-base min-h-[44px]"
+              className="flex items-center justify-center gap-1.5 px-2.5 xs:px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg hover:from-red-600 hover:to-pink-600 active:scale-[0.98] transition-all shadow-lg hover:shadow-xl min-h-[44px] min-w-[44px] flex-shrink-0"
             >
-              <Home className="w-4 h-4 xs:w-4.5 xs:h-4.5 sm:w-5 sm:h-5" />
-              <span className="font-semibold">Ana Sayfa</span>
+              <Home className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-semibold text-xs sm:text-sm hidden sm:inline">Ana Sayfa</span>
             </button>
           </div>
         </div>

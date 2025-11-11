@@ -96,28 +96,27 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                           : 'bg-gray-50 border-gray-200 hover:border-blue-400 hover:bg-blue-50'
                       }`}
                     >
-                      <div className="flex items-start justify-between gap-2 xs:gap-3">
+                      <div className="flex items-start gap-2 xs:gap-3">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onToggleTopic(examType, subject.id, topic.name);
+                          }}
+                          className={`flex-shrink-0 flex items-center justify-center w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded border-2 transition-all mt-0.5 ${
+                            isCompleted
+                              ? 'bg-green-500 border-green-500'
+                              : 'border-gray-300 hover:border-blue-500'
+                          }`}
+                        >
+                          {isCompleted && <Check className="w-3 h-3 xs:w-4 xs:h-4 text-white" />}
+                        </button>
+                        
                         <div className="flex-1 min-w-0">
-                          <div className="flex flex-col xs:flex-row items-end xs:items-center gap-1.5 xs:gap-2 ml-2 xs:ml-3 sm:ml-4 flex-shrink-0">
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onToggleTopic(examType, subject.id, topic.name);
-                              }}
-                              className={`flex-shrink-0 flex items-center justify-center w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded border-2 transition-all ${
-                                isCompleted
-                                  ? 'bg-green-500 border-green-500'
-                                  : 'border-gray-300 hover:border-blue-500'
-                              }`}
-                            >
-                              {isCompleted && <Check className="w-4 h-4 text-white" />}
-                            </button>
-                            <span className="font-semibold text-xs xs:text-sm sm:text-base md:text-lg text-gray-900">{topic.name}</span>
-                          </div>
-
-                          <div className="flex flex-wrap gap-2 ml-8">
+                          <h4 className="font-semibold text-xs xs:text-sm sm:text-base text-gray-900 mb-1.5 xs:mb-2">{topic.name}</h4>
+                          
+                          <div className="flex flex-wrap items-center gap-1.5 xs:gap-2">
                             <span
-                              className="px-1.5 xs:px-2 sm:px-2.5 py-0.5 xs:py-1 rounded text-[10px] xs:text-xs sm:text-sm font-semibold whitespace-nowrap shadow-sm"
+                              className="px-1.5 xs:px-2 py-0.5 xs:py-1 rounded text-[10px] xs:text-xs font-semibold whitespace-nowrap"
                               style={{ 
                                 backgroundColor: priorityColor,
                                 color: 'white'
@@ -125,15 +124,9 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                             >
                               {priorityLabel}
                             </span>
-                            <span className="text-[10px] xs:text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap" style={{ color: subject.color }}>
+                            <span className="text-[10px] xs:text-xs sm:text-sm font-semibold" style={{ color: subject.color }}>
                               {topic.questions} Soru
                             </span>
-                            {topic.description && (
-                              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700 border border-red-300 flex items-center space-x-1">
-                                <AlertCircle className="w-3 h-3" />
-                                <span>{topic.description}</span>
-                              </span>
-                            )}
                           </div>
                         </div>
                       </div>

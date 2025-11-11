@@ -33,24 +33,23 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
             <div className="flex items-center justify-between">
               <button
                 onClick={onBack}
-                className="flex items-center space-x-1 xs:space-x-2 px-3 xs:px-4 sm:px-5 py-2 sm:py-2.5 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors text-sm sm:text-base"
+                className="flex items-center justify-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-100 hover:bg-gray-200 active:scale-95 rounded-lg transition-all min-h-[44px] min-w-[44px]"
               >
                 <ArrowLeft className="w-4 h-4 xs:w-5 xs:h-5" />
-                <span className="hidden xs:inline">Geri</span>
-                <span className="xs:hidden">←</span>
+                <span className="text-sm xs:text-base font-medium hidden xs:inline">Geri</span>
               </button>
               
               <button
                 onClick={onComplete}
-                className={`flex items-center space-x-1 xs:space-x-2 px-3 xs:px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base font-semibold transition-all ${
+                className={`flex items-center justify-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold transition-all min-h-[44px] active:scale-95 ${
                   isCompleted
-                    ? 'bg-green-500 text-white'
+                    ? 'bg-green-500 hover:bg-green-600 text-white'
                     : 'bg-blue-500 hover:bg-blue-600 text-white'
                 }`}
               >
                 <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5" />
-                <span className="hidden xs:inline">{isCompleted ? 'Tamamlandı ✓' : 'Tamamla'}</span>
-                <span className="xs:hidden">{isCompleted ? '✓' : '✓?'}</span>
+                <span className="text-xs xs:text-sm sm:text-base hidden xs:inline">{isCompleted ? 'Tamamlandı' : 'Tamamla'}</span>
+                <span className="text-lg xs:hidden">{isCompleted ? '✓' : '✓'}</span>
               </button>
             </div>
           </div>
