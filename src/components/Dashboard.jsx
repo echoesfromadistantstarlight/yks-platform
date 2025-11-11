@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Home, BookOpen, TrendingUp, Calendar, Settings, GraduationCap, ChevronRight } from 'lucide-react';
+import { Home, BookOpen, TrendingUp, Calendar, Settings, GraduationCap, ChevronRight, Share2 } from 'lucide-react';
 import SubjectList from './SubjectList';
 import ProgressChart from './ProgressChart';
 import StudyPlan from './StudyPlan';
@@ -59,6 +59,65 @@ const Dashboard = ({ onBackToHome }) => {
   const tytProgress = calculateProgress('tyt');
   const aytProgress = calculateProgress('ayt');
 
+  // WhatsApp paylaşma fonksiyonu
+  const shareProgressToWhatsApp = () => {
+    // Toplam ve tamamlanan konu sayılarını hesapla
+    let totalTopics = 0;
+    let completedTopics = 0;
+    const completedBySubject = {};
+    
+    ['tyt', 'ayt'].forEach(examType => {
+      const exam = yksData[examType];
+      exam.subjects.forEach(subject => {
+        const subjectKey = `${examType.toUpperCase()} - ${subject.name}`;
+        completedBySubject[subjectKey] = { completed: 0, total: subject.topics.length };
+        
+        subject.topics.forEach(topic => {
+          totalTopics++;
+          const key = `${examType}-${subject.id}-${topic.name}`;
+          if (progress[key]) {
+            completedTopics++;
+            completedBySubject[subjectKey].completed++;
+          }
+        });
+      });
+    });
+
+    const overallProgress = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
+
+    // WhatsApp mesajını oluştur
+    let message = `📚 *YKS 2026 İLERLEYİŞ RAPORU* 📚\n\n`;
+    message += `👤 *Öğrenci İlerleyiş Özeti*\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    
+    message += `📊 *GENEL DURUM*\n`;
+    message += `✅ Tamamlanan Konu: *${completedTopics}/${totalTopics}*\n`;
+    message += `📈 Genel İlerleme: *%${overallProgress}*\n`;
+    message += `🎯 TYT İlerleme: *%${tytProgress}*\n`;
+    message += `🎯 AYT İlerleme: *%${aytProgress}*\n\n`;
+    
+    message += `📚 *DERS BAZLI İLERLEME*\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    
+    Object.entries(completedBySubject).forEach(([subject, data]) => {
+      const percentage = data.total > 0 ? Math.round((data.completed / data.total) * 100) : 0;
+      const bar = '█'.repeat(Math.floor(percentage / 10)) + '░'.repeat(10 - Math.floor(percentage / 10));
+      message += `*${subject}*\n`;
+      message += `${bar} %${percentage}\n`;
+      message += `${data.completed}/${data.total} konu tamamlandı\n\n`;
+    });
+    
+    message += `━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `📅 Tarih: ${new Date().toLocaleDateString('tr-TR')}\n`;
+    message += `🚀 Platform: YKS Konu Takip Sistemi`;
+
+    // WhatsApp URL'i oluştur
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    
+    // Yeni sekmede aç
+    window.open(whatsappUrl, '_blank');
+  };
+
   const tabs = [
     { id: 'subjects', label: 'Konular', icon: <BookOpen className="w-5 h-5" /> },
     { id: 'progress', label: 'İlerleme', icon: <TrendingUp className="w-5 h-5" /> },
@@ -114,7 +173,7 @@ const Dashboard = ({ onBackToHome }) => {
           <p className="text-xs xs:text-sm sm:text-base text-blue-100 mb-2 xs:mb-3 sm:mb-4 hidden xs:block">
             Bugün hangi konulara çalışmayı planlıyorsun?
           </p>
-          <div className="flex flex-wrap gap-2 xs:gap-2.5 sm:gap-3 md:gap-4">
+          <div className="flex flex-wrap gap-2 xs:gap-2.5 sm:gap-3 md:gap-4 mb-3 xs:mb-4">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-md sm:rounded-lg px-2.5 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3">
               <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Toplam İlerleme</div>
               <div className="text-lg xs:text-xl sm:text-2xl font-bold">{Math.round((tytProgress + aytProgress) / 2)}%</div>
@@ -131,6 +190,15 @@ const Dashboard = ({ onBackToHome }) => {
               </div>
             </div>
           </div>
+          
+          {/* WhatsApp Paylaşma Butonu */}
+          <button
+            onClick={shareProgressToWhatsApp}
+            className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 active:scale-[0.98] text-white font-bold py-2.5 xs:py-3 sm:py-3.5 px-4 rounded-lg sm:rounded-xl transition-all shadow-lg hover:shadow-xl"
+          >
+            <Share2 className="w-4 h-4 xs:w-5 xs:h-5" />
+            <span className="text-xs xs:text-sm sm:text-base">İlerleyişimi WhatsApp'ta Paylaş</span>
+          </button>
         </div>
 
         {/* Tabs */}
