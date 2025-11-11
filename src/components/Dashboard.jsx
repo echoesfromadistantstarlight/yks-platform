@@ -107,34 +107,39 @@ const Dashboard = ({ onBackToHome }) => {
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 py-3 xs:py-4 sm:py-6 md:py-8">
         {/* Welcome Banner */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mb-8 text-white">
-          <h1 className="text-3xl font-bold mb-2">Merhaba! 👋</h1>
-          <p className="text-blue-100 mb-4">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg sm:rounded-xl md:rounded-2xl p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8 text-white">
+          <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold mb-1 xs:mb-1.5 sm:mb-2">Merhaba! 👋</h1>
+          <p className="text-xs xs:text-sm sm:text-base text-blue-100 mb-2 xs:mb-3 sm:mb-4 hidden xs:block">
             Bugün hangi konulara çalışmayı planlıyorsun?
           </p>
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3">
-              <div className="text-sm opacity-90">Toplam İlerleme</div>
-              <div className="text-2xl font-bold">{Math.round((tytProgress + aytProgress) / 2)}%</div>
+          <div className="flex flex-wrap gap-2 xs:gap-2.5 sm:gap-3 md:gap-4">
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-md sm:rounded-lg px-2.5 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3">
+              <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Toplam İlerleme</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold">{Math.round((tytProgress + aytProgress) / 2)}%</div>
             </div>
-            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3">
-              <div className="text-sm opacity-90">Tamamlanan Konular</div>
-              <div className="text-2xl font-bold">
-                {Object.values(progress).filter(Boolean).length}
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-md sm:rounded-lg px-2.5 xs:px-3 sm:px-4 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3">
+              <div className="text-[10px] xs:text-xs sm:text-sm opacity-90">Tamamlanan Konular</div>
+              <div className="text-lg xs:text-xl sm:text-2xl font-bold">
+                {Object.values(progress).filter(Boolean).length}/{(() => {
+                  let total = 0;
+                  yksData.tyt.subjects.forEach(subject => total += subject.topics.length);
+                  yksData.ayt.subjects.forEach(subject => total += subject.topics.length);
+                  return total;
+                })()}
               </div>
             </div>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="flex space-x-2 mb-6 overflow-x-auto">
+        <div className="flex gap-1.5 xs:gap-2 mb-3 xs:mb-4 sm:mb-5 md:mb-6 overflow-x-auto pb-2">
           {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap ${
+              className={`flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-2.5 sm:py-3 rounded-md sm:rounded-lg text-xs xs:text-sm sm:text-base font-semibold transition-all whitespace-nowrap ${
                 activeTab === tab.id
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-600 hover:bg-gray-50'
@@ -150,50 +155,50 @@ const Dashboard = ({ onBackToHome }) => {
         {activeTab === 'subjects' && (
           <div>
             {/* Exam Type Selector */}
-            <div className="flex space-x-4 mb-6">
+            <div className="flex gap-2 xs:gap-2.5 sm:gap-3 md:gap-4 mb-3 xs:mb-4 sm:mb-5 md:mb-6">
               <button
                 onClick={() => setSelectedExam('tyt')}
-                className={`flex-1 p-6 rounded-xl font-semibold transition-all ${
+                className={`flex-1 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl font-semibold transition-all ${
                   selectedExam === 'tyt'
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-xl scale-105'
-                    : 'bg-white text-gray-700 hover:shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg sm:shadow-xl sm:scale-105'
+                    : 'bg-white text-gray-700 hover:shadow-md sm:hover:shadow-lg'
                 }`}
               >
-                <div className="text-2xl font-bold mb-1">TYT</div>
-                <div className={`text-sm ${selectedExam === 'tyt' ? 'text-blue-100' : 'text-gray-500'}`}>
+                <div className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-0.5 xs:mb-1">TYT</div>
+                <div className={`text-[10px] xs:text-xs sm:text-sm hidden xs:block ${selectedExam === 'tyt' ? 'text-blue-100' : 'text-gray-500'}`}>
                   Temel Yeterlilik Testi
                 </div>
-                <div className="mt-2">
-                  <div className="h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
+                <div className="mt-1.5 xs:mt-2">
+                  <div className="h-1.5 xs:h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-white rounded-full transition-all duration-500"
                       style={{ width: `${tytProgress}%` }}
                     />
                   </div>
-                  <div className="text-sm font-bold mt-1">{tytProgress}% Tamamlandı</div>
+                  <div className="text-[10px] xs:text-xs sm:text-sm font-bold mt-0.5 xs:mt-1">{tytProgress}%</div>
                 </div>
               </button>
 
               <button
                 onClick={() => setSelectedExam('ayt')}
-                className={`flex-1 p-6 rounded-xl font-semibold transition-all ${
+                className={`flex-1 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl font-semibold transition-all ${
                   selectedExam === 'ayt'
-                    ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-xl scale-105'
-                    : 'bg-white text-gray-700 hover:shadow-lg'
+                    ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg sm:shadow-xl sm:scale-105'
+                    : 'bg-white text-gray-700 hover:shadow-md sm:hover:shadow-lg'
                 }`}
               >
-                <div className="text-2xl font-bold mb-1">AYT</div>
-                <div className={`text-sm ${selectedExam === 'ayt' ? 'text-purple-100' : 'text-gray-500'}`}>
+                <div className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-0.5 xs:mb-1">AYT</div>
+                <div className={`text-[10px] xs:text-xs sm:text-sm hidden xs:block ${selectedExam === 'ayt' ? 'text-purple-100' : 'text-gray-500'}`}>
                   Alan Yeterlilik Testi
                 </div>
-                <div className="mt-2">
-                  <div className="h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
+                <div className="mt-1.5 xs:mt-2">
+                  <div className="h-1.5 xs:h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
                     <div 
                       className="h-full bg-white rounded-full transition-all duration-500"
                       style={{ width: `${aytProgress}%` }}
                     />
                   </div>
-                  <div className="text-sm font-bold mt-1">{aytProgress}% Tamamlandı</div>
+                  <div className="text-[10px] xs:text-xs sm:text-sm font-bold mt-0.5 xs:mt-1">{aytProgress}%</div>
                 </div>
               </button>
             </div>
