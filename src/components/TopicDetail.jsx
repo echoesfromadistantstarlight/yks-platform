@@ -41,24 +41,23 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               
               <button
                 onClick={onComplete}
-                className={`flex items-center justify-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold transition-all min-h-[44px] active:scale-95 ${
+                className={`flex items-center justify-center gap-1.5 xs:gap-2 px-2.5 xs:px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold transition-all min-h-[44px] min-w-[44px] active:scale-95 ${
                   isCompleted
                     ? 'bg-green-500 hover:bg-green-600 text-white'
                     : 'bg-blue-500 hover:bg-blue-600 text-white'
                 }`}
               >
-                <CheckCircle2 className="w-4 h-4 xs:w-5 xs:h-5" />
-                <span className="text-xs xs:text-sm sm:text-base hidden xs:inline">{isCompleted ? 'Tamamlandı' : 'Tamamla'}</span>
-                <span className="text-lg xs:hidden">{isCompleted ? '✓' : '✓'}</span>
+                <CheckCircle2 className="w-5 h-5 xs:w-5 xs:h-5" />
+                <span className="text-xs xs:text-sm sm:text-base hidden sm:inline">{isCompleted ? 'Tamamlandı' : 'Tamamla'}</span>
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-3 xs:py-4 sm:py-6 md:py-8">
         {/* Title Section */}
-        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 mb-4 xs:mb-5 sm:mb-6 md:mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
+        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
           <div className="flex flex-col sm:flex-row items-start gap-3 xs:gap-4 sm:gap-5 md:gap-6">
             <div className="p-2.5 xs:p-3 sm:p-3.5 md:p-4 lg:p-5 rounded-lg sm:rounded-xl" style={{ backgroundColor: subjectColor, color: 'white' }}>
               <BookOpen className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12" />
@@ -81,7 +80,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         </div>
 
         {/* Content Section */}
-        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 mb-4 xs:mb-5 sm:mb-6 md:mb-8">
+        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-2 bg-blue-500 rounded-lg">
               <BookOpen className="w-6 h-6 text-white" />
@@ -98,7 +97,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
 
         {/* Examples Section */}
         {topicData.examples && topicData.examples.length > 0 && (
-          <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 mb-4 xs:mb-5 sm:mb-6 md:mb-8">
+          <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8">
             <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 mb-3 xs:mb-4 sm:mb-5 md:mb-6">
               <div className="p-1.5 xs:p-2 sm:p-2.5 bg-purple-500 rounded-md sm:rounded-lg">
                 <FileQuestion className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
@@ -138,7 +137,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               {topicData.examples.filter((_, index) => index === currentQuestionIndex).map((example, index) => {
                 const actualIndex = currentQuestionIndex;
                 return (
-                  <div key={actualIndex} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg sm:rounded-xl lg:rounded-2xl p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 border border-gray-200 sm:border-2 shadow-sm">
+                  <div key={actualIndex} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg sm:rounded-xl lg:rounded-2xl p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 sm:border-2 shadow-sm">
                     <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 mb-3 xs:mb-4">
                       <div className="bg-purple-500 text-white font-bold w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center text-xs xs:text-sm sm:text-base md:text-lg">
                         {actualIndex + 1}
@@ -146,7 +145,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                       <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-bold text-gray-900">Örnek Soru</h3>
                     </div>
                   
-                  <div className="bg-white rounded-md sm:rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-5 md:p-6 mb-3 xs:mb-4 shadow-sm">
+                  <div className="bg-white rounded-md sm:rounded-lg lg:rounded-xl p-2.5 xs:p-3 sm:p-4 md:p-5 mb-2.5 xs:mb-3 shadow-sm">
                     <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed whitespace-pre-line mb-3 xs:mb-4">
                       {example.question}
                     </p>

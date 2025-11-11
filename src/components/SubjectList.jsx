@@ -90,41 +90,32 @@ const SubjectList = ({ exam, examType, progress, onToggleTopic, onTopicClick }) 
                     <div
                       key={index}
                       onClick={() => onTopicClick(examType, subject.id, topic.name, subject.color)}
-                      className={`p-2.5 xs:p-3 sm:p-4 md:p-5 rounded-md sm:rounded-lg lg:rounded-xl border-2 transition-all cursor-pointer active:scale-[0.99] ${
+                      className={`p-2 xs:p-2.5 sm:p-3 md:p-4 rounded-md sm:rounded-lg border-2 transition-all cursor-pointer active:scale-[0.99] shadow-sm hover:shadow-md ${
                         isCompleted
                           ? 'bg-green-50 border-green-300 hover:border-green-400'
                           : 'bg-gray-50 border-gray-200 hover:border-blue-400 hover:bg-blue-50'
                       }`}
                     >
-                      <div className="flex items-start gap-2 xs:gap-3">
+                      <div className="flex items-center gap-2 xs:gap-2.5">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             onToggleTopic(examType, subject.id, topic.name);
                           }}
-                          className={`flex-shrink-0 flex items-center justify-center w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 rounded border-2 transition-all mt-0.5 ${
+                          className={`flex-shrink-0 flex items-center justify-center w-5 h-5 xs:w-5.5 xs:h-5.5 sm:w-6 sm:h-6 rounded border-2 transition-all ${
                             isCompleted
                               ? 'bg-green-500 border-green-500'
                               : 'border-gray-300 hover:border-blue-500'
                           }`}
                         >
-                          {isCompleted && <Check className="w-3 h-3 xs:w-4 xs:h-4 text-white" />}
+                          {isCompleted && <Check className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 text-white" />}
                         </button>
                         
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-xs xs:text-sm sm:text-base text-gray-900 mb-1.5 xs:mb-2">{topic.name}</h4>
+                        <div className="flex-1 min-w-0 flex items-center justify-between gap-2">
+                          <h4 className="font-semibold text-xs xs:text-sm sm:text-base text-gray-900">{topic.name}</h4>
                           
-                          <div className="flex flex-wrap items-center gap-1.5 xs:gap-2">
-                            <span
-                              className="px-1.5 xs:px-2 py-0.5 xs:py-1 rounded text-[10px] xs:text-xs font-semibold whitespace-nowrap"
-                              style={{ 
-                                backgroundColor: priorityColor,
-                                color: 'white'
-                              }}
-                            >
-                              {priorityLabel}
-                            </span>
-                            <span className="text-[10px] xs:text-xs sm:text-sm font-semibold" style={{ color: subject.color }}>
+                          <div className="flex items-center gap-1.5 xs:gap-2 flex-shrink-0">
+                            <span className="text-[10px] xs:text-xs font-bold whitespace-nowrap" style={{ color: subject.color }}>
                               {topic.questions} Soru
                             </span>
                           </div>
