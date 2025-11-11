@@ -1,5 +1,6 @@
 // Detaylı konu anlatımları ve örnek sorular
 import { improvedTopicDetails } from './improvedTopicDetails';
+import { sozcukteAnlamContent } from './sozcukteAnlamContent';
 
 export const topicDetails = {
   // Improved HTML formatında içerik
@@ -8,159 +9,103 @@ export const topicDetails = {
   // Diğer konular buraya eklenecek
   "tyt-turkce-Sözcükte Anlam": {
     title: "Sözcükte Anlam",
-    description: "TYT Türkçe'nin EN ÇOK SORU ÇIKAN bölümü. Test'in %55-60'ı sözcükte anlam sorularından oluşur.",
-    importance: "2-2.5 soru",
-    content: `
-<div class="space-y-4">
-  <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-xl border-l-4 border-blue-600">
-    <h3 class="text-2xl font-bold text-blue-900 mb-3">📚 Sözcükte Anlam Nedir?</h3>
-    <p class="text-gray-800 leading-relaxed mb-3">
-      Sözcükte anlam, kelimelerin sahip olduğu anlamları, bu anlamların nasıl oluştuğunu ve kullanıldığı yerlere göre nasıl değiştiğini inceleyen konudur. TYT'de genellikle kelimelerin gerçek-mecaz anlamları, eş-zıt anlamlı kelimeler ve deyimler üzerinden sorular sorulur.
-    </p>
-    <p class="text-gray-700 italic">
-      <strong>Yapısı:</strong> Kelime + Anlam İlişkisi + Cümle İçindeki Kullanım şeklinde yapılandırılır.
-    </p>
-  </div>
-
-  <div class="bg-white border-2 border-indigo-200 rounded-xl p-4">
-    <h4 class="font-bold text-xl mb-3 text-indigo-900 flex items-center gap-2">
-      <span>📖</span> 1. Gerçek ve Mecaz Anlam
-    </h4>
-    <div class="space-y-3">
-      <div class="bg-indigo-50 p-3 rounded-lg">
-        <p class="font-semibold text-indigo-900 mb-2">Gerçek Anlam:</p>
-        <p class="text-gray-700">Kelimenin sözlükteki asıl, ilk anlamıdır. Herhangi bir benzetme veya mecaz içermez.</p>
-        <p class="text-sm text-indigo-600 mt-2">Örnek: <i>"Bahçede bir <strong>aslan</strong> heykeli var."</i> → Aslan kelimesi gerçek anlamıyla kullanılmış.</p>
-      </div>
-      
-      <div class="bg-purple-50 p-3 rounded-lg">
-        <p class="font-semibold text-purple-900 mb-2">Mecaz Anlam:</p>
-        <p class="text-gray-700">Kelimenin benzetme, mecaz veya yan anlam yoluyla kazandığı yeni anlamdır.</p>
-        <p class="text-sm text-purple-600 mt-2">Örnek: <i>"Ahmet <strong>aslan</strong> gibi çocuk."</i> → Aslan kelimesi "cesur, güçlü" anlamında mecaz.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bg-white border-2 border-green-200 rounded-xl p-4">
-    <h4 class="font-bold text-xl mb-3 text-green-900 flex items-center gap-2">
-      <span>🔄</span> 2. Eş Anlamlı Kelimeler (Sinonim)
-    </h4>
-    <p class="text-gray-700 mb-3">Farklı söylenişe sahip ancak aynı veya yakın anlama gelen kelimelerdir.</p>
-    <div class="grid grid-cols-2 gap-2 bg-green-50 p-3 rounded-lg">
-      <div><strong>Yüz</strong> = Çehre, Sima</div>
-      <div><strong>Güzel</strong> = Hoş, Latif</div>
-      <div><strong>Hızlı</strong> = Çabuk, Süratli</div>
-      <div><strong>Mutlu</strong> = Mesut, Bahtiyar</div>
-    </div>
-    <p class="text-sm text-green-700 mt-2 italic">💡 İpucu: Eş anlamlı kelimeler birebir aynı anlama gelmeyebilir, bağlama göre değişiklik gösterir.</p>
-  </div>
-
-  <div class="bg-white border-2 border-red-200 rounded-xl p-4">
-    <h4 class="font-bold text-xl mb-3 text-red-900 flex items-center gap-2">
-      <span>↔️</span> 3. Zıt Anlamlı Kelimeler (Antonim)
-    </h4>
-    <p class="text-gray-700 mb-3">Birbirine tamamen karşıt, zıt anlam taşıyan kelimelerdir.</p>
-    <div class="grid grid-cols-2 gap-2 bg-red-50 p-3 rounded-lg">
-      <div><strong>Sıcak</strong> ↔ Soğuk</div>
-      <div><strong>Uzun</strong> ↔ Kısa</div>
-      <div><strong>Gündüz</strong> ↔ Gece</div>
-      <div><strong>İyi</strong> ↔ Kötü</div>
-    </div>
-  </div>
-
-  <div class="bg-white border-2 border-amber-200 rounded-xl p-4">
-    <h4 class="font-bold text-xl mb-3 text-amber-900 flex items-center gap-2">
-      <span>🎭</span> 4. Deyimler ve Atasözleri
-    </h4>
-    <div class="space-y-2">
-      <div class="bg-amber-50 p-3 rounded-lg">
-        <p class="font-semibold text-amber-900 mb-1">Deyim:</p>
-        <p class="text-gray-700 text-sm">Genellikle gerçek anlamından uzaklaşmış, mecazî anlam kazanmış kalıplaşmış sözlerdir.</p>
-        <p class="text-sm text-amber-700 mt-2">Örnek: <i>"Gözü arkada kalmak"</i> = Endişelenmek</p>
-      </div>
-      
-      <div class="bg-orange-50 p-3 rounded-lg">
-        <p class="font-semibold text-orange-900 mb-1">Atasözü:</p>
-        <p class="text-gray-700 text-sm">Uzun deneyimler sonunda oluşmuş, öğüt veren kalıplaşmış sözlerdir.</p>
-        <p class="text-sm text-orange-700 mt-2">Örnek: <i>"Damlaya damlaya göl olur."</i></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-4 rounded-xl border-2 border-cyan-300">
-    <h4 class="font-bold text-xl mb-3 text-cyan-900 flex items-center gap-2">
-      <span>🎯</span> 5. Sözcükte Anlam Soru Tipleri
-    </h4>
-    <ul class="space-y-2">
-      <li class="flex items-start gap-2">
-        <span class="text-cyan-600 font-bold">•</span>
-        <span class="text-gray-700">Verilen cümledeki kelimenin anlamını bulma</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="text-cyan-600 font-bold">•</span>
-        <span class="text-gray-700">Gerçek veya mecaz anlam ayırt etme</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="text-cyan-600 font-bold">•</span>
-        <span class="text-gray-700">Eş veya zıt anlamlı kelime bulma</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="text-cyan-600 font-bold">•</span>
-        <span class="text-gray-700">Deyim ve atasözü anlamlarını bilme</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <span class="text-cyan-600 font-bold">•</span>
-        <span class="text-gray-700">Kelimenin farklı cümlelerdeki anlamını karşılaştırma</span>
-      </li>
-    </ul>
-  </div>
-</div>
-    `,
+    description: "TYT Türkçe'de 3-4 soru gelir. Gerçek-mecaz anlam, terim-yan-düz anlam, öznel-nesnel, somut-soyut, çağrışım, mecaz-ı mürsel ve istiare konularını kapsar.",
+    importance: "3-4 soru",
+    content: sozcukteAnlamContent,
     examples: [
       {
-        question: "Aşağıdaki cümlelerin hangisinde altı çizili sözcük gerçek anlamıyla kullanılmıştır?",
+        question: "I. Güneş batıda batıyor.\nII. Ahmet aslan gibi cesur bir çocuk.\nIII. Kedi miyavlıyordu.\n\nYukarıdaki cümlelerin hangilerinde mecaz anlam vardır?",
         options: [
-          "A) Konuşmasıyla herkesi büyüledi.",
-          "B) Çocuğun gözleri pırıl pırıl parlıyordu.",
-          "C) Güneş doğuda doğar.",
-          "D) Kalbim seninle çarpıyor.",
-          "E) Sözleri yüreğimi dağladı."
-        ],
-        answer: "C",
-        explanation: "C şıkkındaki 'doğar' kelimesi gerçek anlamıyla (güneşin ufuktan görünmesi) kullanılmıştır. Diğer şıklardaki ifadeler mecaz anlam içerir."
-      },
-      {
-        question: "Aşağıdaki cümlelerin hangisinde altı çizili deyim yanlış kullanılmıştır?",
-        options: [
-          "A) Sınavda burnundan kıl aldırmadı.",
-          "B) Arkadaşının zor durumda olmasına gözünü yumdu.",
-          "C) Bu işi göze almak kolay değil.",
-          "D) Babasının sözünden çıkmaz.",
-          "E) Çocuğun eli ağır, herkesin malını kırar."
-        ],
-        answer: "E",
-        explanation: "'Eli ağır olmak' deyimi cömert olmamak anlamına gelir, malları kırmakla ilgili değildir. O anlamda 'eli ayağına dolaşmak' deyimi kullanılır."
-      },
-      {
-        question: "Aşağıdaki cümlelerin hangisinde 'baş' sözcüğü farklı anlamda kullanılmıştır?",
-        options: [
-          "A) Baş ağrısından öldü.",
-          "B) Köyün başında bir çeşme var.",
-          "C) İşin başına geçecek.",
-          "D) Baş tacı ederiz.",
-          "E) Sınıfın başı o."
+          "A) Yalnız I",
+          "B) Yalnız II",
+          "C) Yalnız III",
+          "D) I ve II",
+          "E) II ve III"
         ],
         answer: "B",
-        explanation: "B şıkkındaki 'baş' kelimesi 'giriş, ön taraf' anlamında kullanılmıştır. Diğer şıklarda 'lider, önder, önemli' gibi anlamlarda kullanılmıştır."
+        explanation: "I. cümlede 'batıyor' kelimesi gerçek anlamda. II. cümlede 'aslan gibi' benzetmesi mecaz anlam oluşturur. III. cümlede 'miyavlıyordu' gerçek anlamda. Doğru cevap B şıkkıdır."
+      },
+      {
+        question: "Aşağıdaki cümlelerin hangisinde 'masa' kelimesi terim anlam kazanmıştır?",
+        options: [
+          "A) Masayı salonun ortasına koyduk.",
+          "B) Geometride masa bir düzlemdir.",
+          "C) Masanın üstünde birçok kitap vardı.",
+          "D) Yemek masası çok güzeldi.",
+          "E) Masa takımını yeni aldık."
+        ],
+        answer: "B",
+        explanation: "B şıkkında 'masa' kelimesi geometri bilim dalında 'düzlem' anlamında terim anlam kazanmıştır. Diğer şıklarda gerçek anlamıyla (mobilya) kullanılmıştır."
+      },
+      {
+        question: "I. Bu çok güzel bir manzara.\nII. Güneş bir yıldızdır.\nIII. O çok akıllı birisi.\n\nYukarıdaki cümlelerin hangilerinde öznel anlam vardır?",
+        options: [
+          "A) Yalnız I",
+          "B) Yalnız II",
+          "C) I ve II",
+          "D) I ve III",
+          "E) I, II ve III"
+        ],
+        answer: "D",
+        explanation: "I ve III. cümlelerde 'güzel' ve 'akıllı' kelimeleri kişiye göre değişen öznel anlamlardır. II. cümledeki 'Güneş bir yıldızdır' bilimsel gerçek olup nesnel anlamdadır."
+      },
+      {
+        question: "Aşağıdaki kelimelerden hangisi soyut anlamlıdır?",
+        options: [
+          "A) Masa",
+          "B) Kalem",
+          "C) Sevgi",
+          "D) Ağaç",
+          "E) Sandalye"
+        ],
+        answer: "C",
+        explanation: "'Sevgi' kelimesi beş duyuyla algılanamayan, soyut bir kavramdır. Diğer seçeneklerdeki kelimeler somut varlıklardır."
+      },
+      {
+        question: "'Bahar' kelimesinin aşağıdakilerden hangisini çağrıştırması en az olasıdır?",
+        options: [
+          "A) Yeniden doğuş",
+          "B) Karanlık",
+          "C) Tazelik",
+          "D) Umut",
+          "E) Çiçekler"
+        ],
+        answer: "B",
+        explanation: "'Bahar' kelimesi genellikle yeniden doğuş, tazelik, umut, çiçekler gibi olumlu kavramları çağrıştırır. 'Karanlık' daha çok kış mevsimini çağrıştıran bir kavramdır."
+      },
+      {
+        question: "Aşağıdaki cümlelerin hangisinde mecaz-ı mürsel (ad aktarması) vardır?",
+        options: [
+          "A) Çiçekler açmış bahçede.",
+          "B) Düşman başını vurduk.",
+          "C) Güneş doğudan doğar.",
+          "D) Kuşlar gökyüzünde uçuyor.",
+          "E) Deniz çok derin."
+        ],
+        answer: "B",
+        explanation: "B şıkkında 'başını' kelimesi parça-bütün ilişkisiyle 'düşmanın tamamı' anlamında kullanılmıştır (mecaz-ı mürsel). Diğer cümlelerde mecaz-ı mürsel yoktur."
+      },
+      {
+        question: "Aşağıdaki cümlelerin hangisinde istiare (eğretileme) vardır?",
+        options: [
+          "A) Asker aslan gibi savaştı.",
+          "B) Aslan savaştı.",
+          "C) Aslan çok güçlü bir hayvandır.",
+          "D) Aslan ormanda dolaşıyor.",
+          "E) Aslanlar avlanıyor."
+        ],
+        answer: "B",
+        explanation: "B şıkkında 'Aslan' kelimesi 'asker' yerine kullanılmıştır (kapalı benzetme). A şıkkında açık benzetme vardır. C, D ve E şıklarında gerçek anlam vardır."
       }
     ],
     tips: [
-      "Her gün 5-10 deyim ve atasözü ezberleyin",
-      "Kelimeleri mutlaka cümle içinde değerlendirin",
-      "Gerçek-mecaz anlam ayrımında 'benzetme' var mı diye bakın",
-      "Eş anlamlı kelimelerin tam aynı olmayabileceğini unutmayın",
-      "TYT'de en çok çıkan 100 deyimi mutlaka bilin",
-      "Eski Türkçe kökenli kelimelerin anlamlarını öğrenin"
+      "Gerçek-mecaz anlam ayrımında benzetme var mı kontrol edin",
+      "Terim anlam bilim dalına özgü teknik anlamdır, yan anlam ikincil anlamdır",
+      "Öznel=kişiye göre değişir, Nesnel=bilimsel gerçek değişmez",
+      "Somut=5 duyuyla algılanır, Soyut=düşünce ile kavranır",
+      "Çağrışım kişiden kişiye değişebilir, şiirde sıkça kullanılır",
+      "Mecaz-ı Mürsel'de benzetme YOK, sadece ilişki vardır (parça-bütün, kap-içerik vb.)",
+      "İstiare=kapalı benzetme, benzeyen gizli benzetilen açık (Aslan savaştı)"
     ]
   },
 
