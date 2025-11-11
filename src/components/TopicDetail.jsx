@@ -6,6 +6,8 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
   const [showAnswer, setShowAnswer] = useState({});
   const [selectedOptions, setSelectedOptions] = useState({});
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
   const topicData = getTopicDetail(examType, subjectId, topicName);
 
   const toggleAnswer = (index) => {
@@ -13,15 +15,39 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
   };
 
   const selectOption = (questionIndex, option) => {
+    // Eğer bu soru zaten cevaplandıysa, tekrar seçim yapılmasın
+    if (selectedOptions[questionIndex]) return;
+
     setSelectedOptions(prev => ({
       ...prev,
       [questionIndex]: option
     }));
+    
     // Şık seçilince otomatik olarak cevabı göster
     setShowAnswer(prev => ({
       ...prev,
       [questionIndex]: true
     }));
+
+    // Doğru cevabı kontrol et
+    const currentExample = topicData.examples[questionIndex];
+    const isCorrect = option === currentExample.answer;
+    
+    // Skoru güncelle
+    setScore(prev => ({
+      correct: prev.correct + (isCorrect ? 1 : 0),
+      total: prev.total + 1
+    }));
+
+    // 1.5 saniye sonra bir sonraki soruya geç veya sonucu göster
+    setTimeout(() => {
+      if (questionIndex < topicData.examples.length - 1) {
+        setCurrentQuestionIndex(questionIndex + 1);
+      } else {
+        // Tüm sorular bitti, skoru göster
+        setQuizCompleted(true);
+      }
+    }, 1500);
   };
 
   return (
@@ -105,12 +131,57 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">Örnek Sorular</h2>
             </div>
             
+            {/* Quiz Completed - Score Display */}
+            {quizCompleted ? (
+              <div className="text-center py-6 xs:py-8 sm:py-10 md:py-12">
+                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl sm:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 border-2 border-yellow-300 shadow-xl mx-auto max-w-md">
+                  <div className="flex justify-center mb-4 xs:mb-5 sm:mb-6">
+                    <Trophy className="w-12 h-12 xs:w-16 xs:h-16 sm:w-20 sm:h-20 text-yellow-500" />
+                  </div>
+                  <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+                    Tebrikler! 🎉
+                  </h3>
+                  <p className="text-sm xs:text-base sm:text-lg text-gray-700 mb-4 xs:mb-5 sm:mb-6">
+                    Tüm soruları tamamladınız!
+                  </p>
+                  <div className="bg-white rounded-lg sm:rounded-xl p-4 xs:p-5 sm:p-6 mb-4 xs:mb-5 sm:mb-6 shadow-lg">
+                    <div className="text-4xl xs:text-5xl sm:text-6xl font-bold mb-2">
+                      <span className="text-green-600">{score.correct}</span>
+                      <span className="text-gray-400 mx-2">/</span>
+                      <span className="text-gray-600">{score.total}</span>
+                    </div>
+                    <p className="text-xs xs:text-sm sm:text-base text-gray-600 font-semibold">
+                      Doğru Cevap
+                    </p>
+                    <div className="mt-3 xs:mt-4">
+                      <div className="text-2xl xs:text-3xl sm:text-4xl font-bold text-blue-600">
+                        %{score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0}
+                      </div>
+                      <p className="text-xs xs:text-sm text-gray-500">Başarı Oranı</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setQuizCompleted(false);
+                      setCurrentQuestionIndex(0);
+                      setSelectedOptions({});
+                      setShowAnswer({});
+                      setScore({ correct: 0, total: 0 });
+                    }}
+                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 xs:px-5 sm:px-6 py-2.5 xs:py-3 sm:py-3.5 rounded-lg sm:rounded-xl font-semibold hover:from-blue-600 hover:to-purple-600 active:scale-95 transition-all shadow-lg text-sm xs:text-base sm:text-lg min-h-[44px]"
+                  >
+                    🔄 Tekrar Dene
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <>
             {/* Question Navigation */}
             <div className="flex items-center justify-between mb-3 xs:mb-4 sm:mb-5 md:mb-6 gap-1.5 xs:gap-2 sm:gap-3">
               <button
                 onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
-                disabled={currentQuestionIndex === 0}
-                className="flex-shrink-0 px-2.5 xs:px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 disabled:bg-gray-100 disabled:text-gray-400 rounded-md sm:rounded-lg text-xs xs:text-sm sm:text-base font-semibold transition-all shadow-sm hover:shadow min-w-[44px] min-h-[44px] flex items-center justify-center"
+                disabled={currentQuestionIndex === 0 || selectedOptions[currentQuestionIndex]}
+                className="flex-shrink-0 px-2.5 xs:px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 disabled:bg-gray-100 disabled:text-gray-400 rounded-md sm:rounded-lg text-xs xs:text-sm sm:text-base font-semibold transition-all shadow-sm hover:shadow min-w-[44px] min-h-[44px] flex items-center justify-center disabled:cursor-not-allowed"
               >
                 <span className="hidden md:inline">← Önceki</span>
                 <span className="hidden sm:inline md:hidden">←</span>
@@ -123,8 +194,8 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
               </div>
               <button
                 onClick={() => setCurrentQuestionIndex(Math.min(topicData.examples.length - 1, currentQuestionIndex + 1))}
-                disabled={currentQuestionIndex === topicData.examples.length - 1}
-                className="flex-shrink-0 px-2.5 xs:px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 disabled:bg-gray-100 disabled:text-gray-400 rounded-md sm:rounded-lg text-xs xs:text-sm sm:text-base font-semibold transition-all shadow-sm hover:shadow min-w-[44px] min-h-[44px] flex items-center justify-center"
+                disabled={currentQuestionIndex === topicData.examples.length - 1 || selectedOptions[currentQuestionIndex]}
+                className="flex-shrink-0 px-2.5 xs:px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 disabled:bg-gray-100 disabled:text-gray-400 rounded-md sm:rounded-lg text-xs xs:text-sm sm:text-base font-semibold transition-all shadow-sm hover:shadow min-w-[44px] min-h-[44px] flex items-center justify-center disabled:cursor-not-allowed"
               >
                 <span className="hidden md:inline">Sonraki →</span>
                 <span className="hidden sm:inline md:hidden">→</span>
@@ -200,6 +271,8 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
                 );
               })}
             </div>
+            </>
+            )}
           </div>
         )}
 
