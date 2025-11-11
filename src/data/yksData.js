@@ -126,7 +126,7 @@ export const yksData = {
   },
   ayt: {
     name: "AYT",
-    fullName: "Alan Yeterlilik Testi",
+    fullName: "Alan Yeterlilik Testi (Sayısal)",
     totalQuestions: 80,
     duration: 180,
     subjects: [
@@ -182,41 +182,6 @@ export const yksData = {
           { name: "Bitki Biyolojisi", questions: "1-2", priority: "medium" },
           { name: "Enerji İlişkileri", questions: "1-2", priority: "medium" },
           { name: "Ekoloji", questions: "1-2", priority: "medium" }
-        ]
-      },
-      {
-        id: "edebiyat",
-        name: "Türk Dili ve Edebiyatı",
-        questions: 24,
-        color: "#3b82f6",
-        topics: [
-          { name: "Cumhuriyet Dönemi", questions: "6-8", priority: "high", description: "EN ÇOK SORU ÇIKAN DÖNEM" },
-          { name: "Metin Bilgisi", questions: "4-5", priority: "high" },
-          { name: "Tanzimat Dönemi", questions: "3-4", priority: "high", description: "ÇOK ÇIKAN" },
-          { name: "Divan Edebiyatı", questions: "1-2", priority: "medium" },
-          { name: "Servet-i Fünun", questions: "2-3", priority: "medium" }
-        ]
-      },
-      {
-        id: "tarih",
-        name: "Tarih-1",
-        questions: 10,
-        color: "#ef4444",
-        topics: [
-          { name: "Osmanlı Tarihi", questions: "4-5", priority: "high" },
-          { name: "Türk-İslam Devletleri", questions: "3", priority: "medium" },
-          { name: "Cumhuriyet Dönemi", questions: "2-3", priority: "medium" }
-        ]
-      },
-      {
-        id: "cografya",
-        name: "Coğrafya-1",
-        questions: 6,
-        color: "#06b6d4",
-        topics: [
-          { name: "Beşeri Coğrafya", questions: "3", priority: "high" },
-          { name: "Türkiye Coğrafyası", questions: "2", priority: "medium" },
-          { name: "Fiziki Coğrafya", questions: "1", priority: "medium" }
         ]
       }
     ]
