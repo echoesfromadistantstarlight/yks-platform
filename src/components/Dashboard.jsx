@@ -86,20 +86,20 @@ const Dashboard = ({ onBackToHome }) => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8 gap-4">
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <GraduationCap className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600" />
+        <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-3 xs:py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 xs:gap-4">
+            <div className="flex items-center gap-2.5 xs:gap-3 sm:gap-4">
+              <GraduationCap className="w-8 h-8 xs:w-10 xs:h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 text-blue-600" />
               <div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">YKS Konu Takip</h1>
-                <p className="text-sm sm:text-base text-gray-600">2026 Sınav Dönemi</p>
+                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">YKS Konu Takip</h1>
+                <p className="text-xs xs:text-sm sm:text-base text-gray-600">2026 Sınav Dönemi</p>
               </div>
             </div>
             <button
               onClick={onBackToHome}
-              className="flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-xl hover:from-red-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
+              className="flex items-center gap-1.5 xs:gap-2 px-3 xs:px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg sm:rounded-xl hover:from-red-600 hover:to-pink-600 active:scale-[0.98] transition-all shadow-lg hover:shadow-xl text-xs xs:text-sm sm:text-base min-h-[44px]"
             >
-              <Home className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Home className="w-4 h-4 xs:w-4.5 xs:h-4.5 sm:w-5 sm:h-5" />
               <span className="font-semibold">Ana Sayfa</span>
             </button>
           </div>
