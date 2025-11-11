@@ -51,11 +51,11 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 px-0 xs:px-2 sm:px-4 md:px-6 lg:px-8 py-0">
       {/* Header */}
       <div className="bg-white shadow-lg sticky top-0 z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4">
             <div className="flex items-center justify-between">
               <button
                 onClick={onBack}
@@ -81,9 +81,9 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-3 xs:py-4 sm:py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 md:px-6 lg:px-8 py-2 xs:py-3 sm:py-4 md:py-6">
         {/* Title Section */}
-        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
+        <div className="bg-white rounded-none xs:rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 mb-2 xs:mb-3 sm:mb-4 md:mb-6 bg-gradient-to-r from-blue-50 to-purple-50 border-2" style={{ borderColor: subjectColor }}>
           <div className="flex flex-col sm:flex-row items-start gap-3 xs:gap-4 sm:gap-5 md:gap-6">
             <div className="p-2.5 xs:p-3 sm:p-3.5 md:p-4 lg:p-5 rounded-lg sm:rounded-xl" style={{ backgroundColor: subjectColor, color: 'white' }}>
               <BookOpen className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12" />
@@ -106,7 +106,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
         </div>
 
         {/* Content Section */}
-        <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8">
+        <div className="bg-white rounded-none xs:rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 mb-2 xs:mb-3 sm:mb-4 md:mb-6">
           <div className="flex items-center space-x-3 mb-6">
             <div className="p-2 bg-blue-500 rounded-lg">
               <BookOpen className="w-6 h-6 text-white" />
@@ -123,7 +123,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
 
         {/* Examples Section */}
         {topicData.examples && topicData.examples.length > 0 && (
-          <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 mb-3 xs:mb-4 sm:mb-6 md:mb-8">
+          <div className="bg-white rounded-none xs:rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 mb-2 xs:mb-3 sm:mb-4 md:mb-6">
             <div className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 mb-3 xs:mb-4 sm:mb-5 md:mb-6">
               <div className="p-1.5 xs:p-2 sm:p-2.5 bg-purple-500 rounded-md sm:rounded-lg">
                 <FileQuestion className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
@@ -278,7 +278,7 @@ const TopicDetail = ({ examType, subjectId, topicName, subjectColor, onBack, onC
 
         {/* Tips Section */}
         {topicData.tips && topicData.tips.length > 0 && (
-          <div className="card bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-orange-200">
+          <div className="bg-white rounded-none xs:rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 mb-2 xs:mb-3 sm:mb-4 md:mb-6 bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-orange-200">
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-2 bg-orange-500 rounded-lg">
                 <Lightbulb className="w-6 h-6 text-white" />
